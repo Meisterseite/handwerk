@@ -325,3 +325,21 @@ a{color:inherit;text-decoration:none}
   background-repeat: no-repeat;
 }
 
+.tradeCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.tradeCardBg {
+  position: absolute;
+  inset: 0;
+}
+
+.tradeCardBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
