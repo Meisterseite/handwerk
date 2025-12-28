@@ -1,13 +1,299 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Meisterseite – Handwerk</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meisterseite – Websites für Handwerker</title>
+  <meta name="description" content="Moderne Websites für Handwerker. Klar, schnell, überzeugend. Beispiele ansehen und kostenloses Angebot anfordern." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Gute Arbeit verdient eine gute Website</h1>
-  <p>Websites für Handwerker</p>
+  <a class="skip" href="#content">Zum Inhalt</a>
+
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Meisterseite Start">
+        <span class="brand__mark">M</span>
+        <span class="brand__text">
+          <span class="brand__name">Meisterseite</span>
+          <span class="brand__tag">Websites für Handwerker</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="nav__link" href="#beispiele">Beispiele</a>
+        <a class="nav__link" href="#leistungen">Leistungen</a>
+        <a class="nav__link" href="#ablauf">Ablauf</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+        <a class="nav__cta" href="#beispiele">Beispiele ansehen</a>
+      </nav>
+
+      <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <div class="container mobileNav__inner">
+        <a class="mobileNav__link" href="#beispiele">Beispiele</a>
+        <a class="mobileNav__link" href="#leistungen">Leistungen</a>
+        <a class="mobileNav__link" href="#ablauf">Ablauf</a>
+        <a class="mobileNav__link" href="#faq">FAQ</a>
+        <a class="mobileNav__cta" href="#beispiele">Beispiele ansehen</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">Für Solo Handwerker • Schnell online • Aufträge statt Leerlauf</div>
+
+          <h1 class="hero__h1">
+            Gute Arbeit verdient eine gute Website.
+          </h1>
+
+          <p class="hero__sub">
+            Modernes Design, klare Struktur, starke Vertrauenssignale.
+            So, dass Kunden anrufen statt weiter zu suchen.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#beispiele">Beispiele ansehen</a>
+            <a class="btn btn--ghost" href="#leistungen">Was du bekommst</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <div class="trust__num">48h</div>
+              <div class="trust__txt">erste Demo Seite</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__num">0€</div>
+              <div class="trust__txt">unverbindlich starten</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__num">Klar</div>
+              <div class="trust__txt">Text, Struktur, CTA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="Vorschau Karten">
+          <div class="glassCard reveal">
+            <div class="glassCard__top">
+              <div class="dot dot--r"></div>
+              <div class="dot dot--y"></div>
+              <div class="dot dot--g"></div>
+              <div class="glassCard__title">Beispiel Website</div>
+            </div>
+            <div class="glassCard__body">
+              <div class="mockLine w60"></div>
+              <div class="mockLine w85"></div>
+              <div class="mockLine w70"></div>
+              <div class="mockGrid">
+                <div class="mockTile"></div>
+                <div class="mockTile"></div>
+                <div class="mockTile"></div>
+                <div class="mockTile"></div>
+              </div>
+              <div class="mockCTA">Kontakt aufnehmen</div>
+            </div>
+          </div>
+
+          <div class="badge reveal" style="animation-delay:120ms">
+            <span class="badge__icon">✓</span>
+            <span class="badge__text">Professionell. Schnell. Auf Handwerk getrimmt.</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="beispiele">
+      <div class="container">
+        <div class="section__head">
+          <h2>Beispiele für Gewerke</h2>
+          <p>Du klickst drauf und siehst, wie eine echte Seite für das Gewerk wirken kann.</p>
+        </div>
+
+        <div class="cards">
+          <a class="card reveal" href="maler.html">
+            <div class="card__top">
+              <div class="card__icon">🎨</div>
+              <div class="card__title">Malerbetrieb</div>
+            </div>
+            <div class="card__text">Saubere Referenzen, Vorher Nachher, schnelle Anfrage.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+
+          <a class="card reveal" href="elektriker.html" style="animation-delay:80ms">
+            <div class="card__top">
+              <div class="card__icon">⚡️</div>
+              <div class="card__title">Elektriker</div>
+            </div>
+            <div class="card__text">Notdienst, Leistungen, Vertrauen, klare Kontaktwege.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+
+          <a class="card reveal" href="sanitaer.html" style="animation-delay:160ms">
+            <div class="card__top">
+              <div class="card__icon">🚿</div>
+              <div class="card__title">Sanitär Heizung</div>
+            </div>
+            <div class="card__text">Wartung, Badmodernisierung, schnelle Termin Anfrage.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+
+          <a class="card reveal" href="garten.html" style="animation-delay:240ms">
+            <div class="card__top">
+              <div class="card__icon">🌿</div>
+              <div class="card__title">Garten Landschaft</div>
+            </div>
+            <div class="card__text">Projekte, Saison Angebote, simple Anfrage.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+
+          <a class="card reveal" href="dach.html" style="animation-delay:320ms">
+            <div class="card__top">
+              <div class="card__icon">🏠</div>
+              <div class="card__title">Dachdecker</div>
+            </div>
+            <div class="card__text">Sturm, Reparatur, Vertrauen, schnelle Notfall Kontaktierung.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+
+          <a class="card reveal" href="fliesen.html" style="animation-delay:400ms">
+            <div class="card__top">
+              <div class="card__icon">🧱</div>
+              <div class="card__title">Fliesenleger</div>
+            </div>
+            <div class="card__text">Referenzen, Stil, klare Anfrage mit Fotos.</div>
+            <div class="card__arrow">Ansehen →</div>
+          </a>
+        </div>
+
+        <div class="notice">
+          <div class="notice__title">Wichtig</div>
+          <div class="notice__text">Die Beispielseiten legen wir als eigene Dateien an. Du hast die Links schon drin.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="leistungen">
+      <div class="container">
+        <div class="section__head">
+          <h2>Leistungen, die wirken</h2>
+          <p>Keine Show. Dinge, die Kunden wirklich überzeugen.</p>
+        </div>
+
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__title">Klare Struktur</div>
+            <div class="feature__text">Leistungen, Referenzen, Vertrauen, Kontakt. Ohne Umwege.</div>
+          </div>
+          <div class="feature reveal" style="animation-delay:80ms">
+            <div class="feature__title">Vertrauen sichtbar</div>
+            <div class="feature__text">Bilder, echte Beispiele, klare Aussagen, saubere Darstellung.</div>
+          </div>
+          <div class="feature reveal" style="animation-delay:160ms">
+            <div class="feature__title">Schnell und sauber</div>
+            <div class="feature__text">Kurze Ladezeiten, gute Lesbarkeit, moderne Optik.</div>
+          </div>
+          <div class="feature reveal" style="animation-delay:240ms">
+            <div class="feature__title">Kontakt ohne Reibung</div>
+            <div class="feature__text">Button immer sichtbar, mehrere Wege: WhatsApp, Anruf, Formular.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf">
+      <div class="container">
+        <div class="section__head">
+          <h2>Ablauf in 3 Schritten</h2>
+          <p>Direkt, effizient, ohne Agentur Theater.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <div class="step__title">Du schaust Beispiele</div>
+              <div class="step__text">Du sagst: so in die Richtung oder anders. Fertig.</div>
+            </div>
+          </div>
+          <div class="step reveal" style="animation-delay:100ms">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <div class="step__title">Ich baue eine Demo</div>
+              <div class="step__text">Erste Version mit Design und Struktur. Du gibst Feedback.</div>
+            </div>
+          </div>
+          <div class="step reveal" style="animation-delay:200ms">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <div class="step__title">Live und startklar</div>
+              <div class="step__text">Feinschliff, Inhalte, Kontakt. Website online, fertig.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2>FAQ</h2>
+          <p>Die typischen Fragen, direkt beantwortet.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item reveal">
+            <summary>Wie schnell geht das?</summary>
+            <div class="faq__content">Wenn Inhalte und Richtung klar sind, ist eine Demo sehr schnell drin. Danach feilen wir an Text und Referenzen.</div>
+          </details>
+
+          <details class="faq__item reveal" style="animation-delay:80ms">
+            <summary>Brauch ich Fotos?</summary>
+            <div class="faq__content">Eigene Fotos sind besser. Wenn nicht, starten wir mit passenden Platzhaltern und ersetzen später.</div>
+          </details>
+
+          <details class="faq__item reveal" style="animation-delay:160ms">
+            <summary>Kann ich später eine eigene Domain nutzen?</summary>
+            <div class="faq__content">Ja. Erst bauen wir die Seite. Domain und DNS machen wir danach sauber, sonst blockiert es dich nur.</div>
+          </details>
+        </div>
+
+        <div class="ctaPanel reveal" style="animation-delay:220ms">
+          <div class="ctaPanel__text">
+            <div class="ctaPanel__title">Als Nächstes: Beispiel auswählen</div>
+            <div class="ctaPanel__sub">Dann bauen wir darauf deine Variante.</div>
+          </div>
+          <a class="btn btn--primary" href="#beispiele">Beispiele ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">Meisterseite</div>
+        <div class="footer__small">Websites für Handwerker • Klar • Schnell • Vertrauensstark</div>
+      </div>
+      <div class="footer__links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="stickyContact" href="#beispiele" aria-label="Beispiele ansehen">
+    Beispiele
+  </a>
 
   <script src="script.js"></script>
 </body>
