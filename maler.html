@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malerbetrieb Beispielseite – Meisterseite</title>
+  <meta name="description" content="Beispiel Webseite für einen Malerbetrieb. Moderne Struktur, Referenzen und Kontakt." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbarInner">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <span class="brandMark">M</span>
+        <span class="brandText">
+          <span class="brandName">Meisterseite</span>
+          <span class="brandTag">Beispielseite</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a class="navLink" href="index.html#gewerke">Zurück</a>
+        <a class="navCta" href="#kontakt">Kontakt</a>
+      </nav>
+
+      <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <div class="container mobileNavInner">
+        <a class="mobileNavLink" href="index.html#gewerke">Zurück</a>
+        <a class="mobileNavCta" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:18px">
+      <div class="heroBg" aria-hidden="true"></div>
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <div class="pill">Beispielseite für Malerbetrieb</div>
+          <h1 class="heroH1">Innen, Außen, Fassade. Sauber geplant. Sauber gemacht.</h1>
+          <p class="heroSub">
+            Klare Leistungspakete, echte Referenzen, schnelle Kontaktmöglichkeiten. Genau das, was Kunden suchen.
+          </p>
+          <div class="heroActions">
+            <a class="btn btnPrimary" href="#referenzen">Referenzen</a>
+            <a class="btn btnGhost" href="#kontakt">Angebot anfragen</a>
+          </div>
+          <div class="trustRow">
+            <div class="trustItem"><div class="trustNum">Transparent</div><div class="trustTxt">klare Leistungen</div></div>
+            <div class="trustItem"><div class="trustNum">Sauber</div><div class="trustTxt">seriöse Optik</div></div>
+            <div class="trustItem"><div class="trustNum">Schnell</div><div class="trustTxt">Kontakt ohne Hürden</div></div>
+          </div>
+        </div>
+
+        <div class="heroVisual">
+          <div class="previewCard">
+            <div class="previewTop">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="previewTitle">Projekt Vorschau</span>
+            </div>
+            <div class="previewBody">
+              <img alt="Maler Referenz" style="width:100%;height:240px;object-fit:cover;border-radius:18px;border:1px solid rgba(15,17,21,.10)"
+                   src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80">
+              <div style="margin-top:12px;color:#334155;font-size:14px">
+                Fassade, Innenräume, Lackarbeiten. Modernes Raster, klare Texte.
+              </div>
+            </div>
+          </div>
+          <div class="smallNote">Das ist eine Beispiel Unterseite. Texte und Bilder ersetzt du später durch echte Inhalte.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="leistungen">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Leistungen</h2>
+          <p>Kurz und klar. Kunden verstehen es sofort.</p>
+        </div>
+
+        <div class="featureGrid">
+          <div class="feature"><div class="featureTitle">Innenanstrich</div><div class="featureText">Wände, Decken, saubere Kanten, schnelle Ausführung.</div></div>
+          <div class="feature"><div class="featureTitle">Fassade</div><div class="featureText">Wetterfest, langlebig, optisch sauber. Beratung inklusive.</div></div>
+          <div class="feature"><div class="featureTitle">Lackarbeiten</div><div class="featureText">Türen, Geländer, Treppen. Glatte Oberfläche, hochwertige Optik.</div></div>
+          <div class="feature"><div class="featureTitle">Spachtel und Tapezier</div><div class="featureText">Vorbereitung die Qualität sichtbar macht.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="referenzen">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Referenzen</h2>
+          <p>Beispiele die Vertrauen erzeugen.</p>
+        </div>
+
+        <div class="tradeGrid" style="grid-template-columns:repeat(3, 1fr)">
+          <div class="tradeButton" style="min-height:220px">
+            <div class="tradeFront">
+              <div class="tradeName">Wohnung Renovierung</div>
+              <div class="tradeHint">Wände, Decken, Türen</div>
+            </div>
+          </div>
+          <div class="tradeButton" style="min-height:220px">
+            <div class="tradeFront">
+              <div class="tradeName">Fassade Einfamilienhaus</div>
+              <div class="tradeHint">Grundierung, Anstrich</div>
+            </div>
+          </div>
+          <div class="tradeButton" style="min-height:220px">
+            <div class="tradeFront">
+              <div class="tradeName">Büroflächen</div>
+              <div class="tradeHint">schnell und sauber</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="kontakt">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Kontakt</h2>
+          <p>Beispiel Bereich. Später mit echten Daten.</p>
+        </div>
+
+        <div class="featureGrid">
+          <div class="feature">
+            <div class="featureTitle">Telefon</div>
+            <div class="featureText">0123 456789</div>
+          </div>
+          <div class="feature">
+            <div class="featureTitle">E Mail</div>
+            <div class="featureText">kontakt beispiel.de</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <div>
+          <div class="footerBrand">Meisterseite</div>
+          <div class="footerSmall">Beispielseite Malerbetrieb</div>
+        </div>
+        <div class="footerLinks">
+          <a href="index.html">Start</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <a class="sticky" href="#kontakt" aria-label="Kontakt">Kontakt</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
