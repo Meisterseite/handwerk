@@ -342,4 +342,22 @@ a{color:inherit;text-decoration:none}
   object-position: center;
   display: block;
 }
+.tradeCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.tradeCardBg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.tradeCardBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
