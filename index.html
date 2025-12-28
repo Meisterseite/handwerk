@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meisterseite – Websites für Handwerker</title>
-  <meta name="description" content="Moderne Websites für Handwerker. Beispiele pro Gewerk ansehen und als Unterseite öffnen." />
+  <meta name="description" content="Moderne Websites für Handwerker. Pro Gewerk Vorschau in der Kachel und Beispielseite als Unterseite." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -44,17 +44,22 @@
   <main>
     <section class="hero">
       <div class="heroBg" aria-hidden="true"></div>
+
       <div class="container heroGrid">
         <div class="heroCopy">
           <div class="pill">Für Solo Handwerker. Klar. Schnell. Vertrauensstark.</div>
+
           <h1 class="heroH1">Gute Arbeit verdient eine gute Website.</h1>
+
           <p class="heroSub">
             Du zeigst Kunden in Sekunden, dass du seriös bist. Damit sie anrufen statt weiter zu suchen.
           </p>
+
           <div class="heroActions">
             <a class="btn btnPrimary" href="#gewerke">Gewerk wählen</a>
             <a class="btn btnGhost" href="#leistungen">Was du bekommst</a>
           </div>
+
           <div class="trustRow">
             <div class="trustItem">
               <div class="trustNum">Klar</div>
@@ -84,10 +89,10 @@
               <div class="grid2">
                 <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
               </div>
-              <div class="miniCta">Beispielseite öffnen</div>
+              <div class="miniCta">In den Kacheln öffnet sich eine Vorschau</div>
             </div>
           </div>
-          <div class="smallNote">Klicke ein Gewerk. Vorschau fährt in der Schaltfläche rein.</div>
+          <div class="smallNote">Klicke auf eine Kachel. Öffnen erfolgt nur über den Button in der Vorschau.</div>
         </div>
       </div>
     </section>
@@ -95,142 +100,148 @@
     <section class="section" id="gewerke">
       <div class="container">
         <div class="sectionHead">
-          <h2>Wähle ein Gewerk</h2>
-          <p>Erster Klick zeigt die Vorschau. Zweiter Klick öffnet die Unterseite.</p>
+          <h2>Gewerke</h2>
+          <p>Klick auf Kachel zeigt Vorschau. Button öffnet die Beispielseite.</p>
         </div>
 
         <div class="tradeGrid">
-          <a class="tradeButton" href="maler.html" data-trade="maler" aria-label="Maler Beispielseite öffnen">
+          <!-- Maler -->
+          <button class="tradeButton" type="button" data-href="maler.html" aria-label="Malerbetrieb Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Malerbetrieb</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Malerbetrieb Vorschau" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Malerbetrieb Vorschau" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Malerbetrieb</div>
-                <div class="tradeDesc">Saubere Referenzen. Vorher nachher. Vertrauen sofort sichtbar.</div>
+                <div class="tradeDesc">Referenzen im Fokus. Klarer Ablauf. Anfrage ohne Reibung.</div>
                 <ul class="tradeList">
-                  <li>Leistungen klar gegliedert</li>
-                  <li>Galerie mit Projekten</li>
-                  <li>Schnelle Anfrage</li>
+                  <li>Leistungen sauber gegliedert</li>
+                  <li>Vorher Nachher Bereich</li>
+                  <li>Kontakt oben sichtbar</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="tradeButton" href="elektriker.html" data-trade="elektriker" aria-label="Elektriker Beispielseite öffnen">
+          <!-- Elektriker -->
+          <button class="tradeButton" type="button" data-href="elektriker.html" aria-label="Elektriker Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Elektriker</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Elektriker Vorschau" src="https://images.unsplash.com/photo-1581091870622-2c10b4f05b32?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Elektriker Vorschau" src="https://images.unsplash.com/photo-1581091870622-2c10b4f05b32?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Elektriker</div>
-                <div class="tradeDesc">Notdienst sichtbar. Leistungen klar. Kontakt ohne Umwege.</div>
+                <div class="tradeDesc">Notdienst klar. Leistungen schnell erfassbar. Vertrauen sichtbar.</div>
                 <ul class="tradeList">
                   <li>Notfall Bereich oben</li>
                   <li>Leistungsboxen</li>
-                  <li>Kontaktwege sofort</li>
+                  <li>Kontakt in einem Klick</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="tradeButton" href="sanitaer.html" data-trade="sanitaer" aria-label="Sanitär und Heizung Beispielseite öffnen">
+          <!-- Sanitär -->
+          <button class="tradeButton" type="button" data-href="sanitaer.html" aria-label="Sanitär und Heizung Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Sanitär und Heizung</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Sanitär Vorschau" src="https://images.unsplash.com/photo-1581579185169-6a0c2a40c90f?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Sanitär Vorschau" src="https://images.unsplash.com/photo-1581579185169-6a0c2a40c90f?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Sanitär und Heizung</div>
-                <div class="tradeDesc">Badmodernisierung und Wartung. Seriös und aufgeräumt.</div>
+                <div class="tradeDesc">Badmodernisierung, Wartung, Reparatur. Seriös strukturiert.</div>
                 <ul class="tradeList">
                   <li>Pakete und Leistungen</li>
                   <li>Projektbeispiele</li>
                   <li>Termin Anfrage</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="tradeButton" href="dach.html" data-trade="dach" aria-label="Dachdecker Beispielseite öffnen">
+          <!-- Dach -->
+          <button class="tradeButton" type="button" data-href="dach.html" aria-label="Dachdecker Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Dachdecker</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Dachdecker Vorschau" src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Dachdecker Vorschau" src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Dachdecker</div>
-                <div class="tradeDesc">Sturm und Reparatur. Vertrauen und schnelle Hilfe sichtbar.</div>
+                <div class="tradeDesc">Reparatur und Notfälle. Klare Hilfe. Schneller Kontakt.</div>
                 <ul class="tradeList">
                   <li>Notfall Kontakt</li>
                   <li>Leistungsspektrum</li>
-                  <li>Referenzbilder</li>
+                  <li>Referenzen</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="tradeButton" href="garten.html" data-trade="garten" aria-label="Garten und Landschaft Beispielseite öffnen">
+          <!-- Garten -->
+          <button class="tradeButton" type="button" data-href="garten.html" aria-label="Garten und Landschaft Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Garten und Landschaft</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Garten und Landschaft Vorschau" src="https://images.unsplash.com/photo-1523413455145-9c2f7b2b2b69?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Garten und Landschaft Vorschau" src="https://images.unsplash.com/photo-1523413455145-9c2f7b2b2b69?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Garten und Landschaft</div>
-                <div class="tradeDesc">Projekte im Fokus. Saison Angebote. Sauberer Look.</div>
+                <div class="tradeDesc">Projekte sprechen für sich. Saubere Galerie. Anfrage klar.</div>
                 <ul class="tradeList">
-                  <li>Projekt Galerie</li>
-                  <li>Leistungen pro Saison</li>
-                  <li>Anfrage einfach</li>
+                  <li>Projektgalerie</li>
+                  <li>Saison Leistungen</li>
+                  <li>Einfacher Kontakt</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a class="tradeButton" href="fliesen.html" data-trade="fliesen" aria-label="Fliesenleger Beispielseite öffnen">
+          <!-- Fliesen -->
+          <button class="tradeButton" type="button" data-href="fliesen.html" aria-label="Fliesenleger Vorschau">
             <div class="tradeFront">
               <div class="tradeName">Fliesenleger</div>
-              <div class="tradeHint">Klicken für Vorschau</div>
+              <div class="tradeHint">Vorschau anzeigen</div>
             </div>
             <div class="tradeSlide" aria-hidden="true">
               <div class="tradeMedia">
-                <img alt="Fliesenleger Vorschau" src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80">
+                <img alt="Fliesenleger Vorschau" src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1400&q=80">
               </div>
               <div class="tradeInfo">
                 <div class="tradeTitle">Fliesenleger</div>
-                <div class="tradeDesc">Qualität zeigen. Materialien. Projekte. Klare Anfrage.</div>
+                <div class="tradeDesc">Qualität sichtbar. Referenzen im Raster. Anfrage mit Fotos.</div>
                 <ul class="tradeList">
-                  <li>Referenzen im Raster</li>
-                  <li>Stil und Material</li>
-                  <li>Anfrage mit Fotos</li>
+                  <li>Referenzen</li>
+                  <li>Material und Stil</li>
+                  <li>Kontakt direkt</li>
                 </ul>
-                <div class="tradeOpen">Beispielseite öffnen</div>
+                <button type="button" class="tradeOpen">Beispielseite öffnen</button>
               </div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -239,25 +250,25 @@
       <div class="container">
         <div class="sectionHead">
           <h2>Leistungen</h2>
-          <p>Direkt auf Solo Handwerker ausgelegt.</p>
+          <p>Für Solo Handwerker gemacht. Ohne unnötige Komplexität.</p>
         </div>
 
         <div class="featureGrid">
           <div class="feature">
-            <div class="featureTitle">Vertrauen</div>
-            <div class="featureText">Referenzen, klare Aussagen, saubere Bilder, keine Bastel Optik.</div>
+            <div class="featureTitle">Struktur</div>
+            <div class="featureText">Leistungen, Referenzen, Ablauf, Kontakt. Ohne Umwege.</div>
           </div>
           <div class="feature">
-            <div class="featureTitle">Struktur</div>
-            <div class="featureText">Leistungen, Ablauf, Fragen, Kontakt. Ohne Umwege.</div>
+            <div class="featureTitle">Vertrauen</div>
+            <div class="featureText">Saubere Bilder, klare Aussagen, seriöse Optik.</div>
           </div>
           <div class="feature">
             <div class="featureTitle">Performance</div>
-            <div class="featureText">Schnell, leicht, sauber. Kein schwerer Müll.</div>
+            <div class="featureText">Schnell und leicht. Keine überladene Technik.</div>
           </div>
           <div class="feature">
-            <div class="featureTitle">Kontakt</div>
-            <div class="featureText">Klare Call to Action, damit Anfragen reinkommen.</div>
+            <div class="featureTitle">Conversion</div>
+            <div class="featureText">Klarer Fokus. Beispiel sehen. Dann Kontakt.</div>
           </div>
         </div>
       </div>
@@ -267,29 +278,29 @@
       <div class="container">
         <div class="sectionHead">
           <h2>Ablauf</h2>
-          <p>Ohne Agentur Theater.</p>
+          <p>Direkt. Effizient. Ohne Agentur Theater.</p>
         </div>
 
         <div class="steps">
           <div class="step">
             <div class="stepNum">1</div>
             <div class="stepBody">
-              <div class="stepTitle">Gewerk wählen</div>
-              <div class="stepText">Du klickst dich durch die Beispiele und sagst, was dir gefällt.</div>
+              <div class="stepTitle">Beispiel auswählen</div>
+              <div class="stepText">Du wählst ein Gewerk und eine Stilrichtung.</div>
             </div>
           </div>
           <div class="step">
             <div class="stepNum">2</div>
             <div class="stepBody">
               <div class="stepTitle">Demo Version</div>
-              <div class="stepText">Ich baue die erste Version mit Struktur und Design.</div>
+              <div class="stepText">Ich baue eine erste Version und wir justieren nach.</div>
             </div>
           </div>
           <div class="step">
             <div class="stepNum">3</div>
             <div class="stepBody">
               <div class="stepTitle">Live</div>
-              <div class="stepText">Feinschliff, Inhalte, Kontakt. Fertig online.</div>
+              <div class="stepText">Feinschliff, Inhalte, Kontakt. Website online.</div>
             </div>
           </div>
         </div>
@@ -309,7 +320,7 @@
       </div>
     </footer>
 
-    <a class="sticky" href="#gewerke" aria-label="Gewerk wählen">Beispiele</a>
+    <a class="sticky" href="#gewerke" aria-label="Beispiele">Beispiele</a>
   </main>
 
   <script src="script.js"></script>
