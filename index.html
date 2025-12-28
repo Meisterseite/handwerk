@@ -4,29 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meisterseite – Websites für Handwerker</title>
-  <meta name="description" content="Moderne Websites für Handwerker. Klar, schnell, überzeugend. Beispiele ansehen und kostenloses Angebot anfordern." />
+  <meta name="description" content="Moderne Websites für Handwerker. Beispiele pro Gewerk ansehen und als Unterseite öffnen." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <a class="skip" href="#content">Zum Inhalt</a>
-
-  <header class="topbar" id="top">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="Meisterseite Start">
-        <span class="brand__mark">M</span>
-        <span class="brand__text">
-          <span class="brand__name">Meisterseite</span>
-          <span class="brand__tag">Websites für Handwerker</span>
+  <header class="topbar">
+    <div class="container topbarInner">
+      <a class="brand" href="index.html" aria-label="Meisterseite Start">
+        <span class="brandMark">M</span>
+        <span class="brandText">
+          <span class="brandName">Meisterseite</span>
+          <span class="brandTag">Websites für Handwerker</span>
         </span>
       </a>
 
       <nav class="nav" aria-label="Hauptnavigation">
-        <a class="nav__link" href="#beispiele">Beispiele</a>
-        <a class="nav__link" href="#leistungen">Leistungen</a>
-        <a class="nav__link" href="#ablauf">Ablauf</a>
-        <a class="nav__link" href="#faq">FAQ</a>
-        <a class="nav__cta" href="#beispiele">Beispiele ansehen</a>
+        <a class="navLink" href="#gewerke">Gewerke</a>
+        <a class="navLink" href="#leistungen">Leistungen</a>
+        <a class="navLink" href="#ablauf">Ablauf</a>
+        <a class="navCta" href="#gewerke">Beispiele ansehen</a>
       </nav>
 
       <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
@@ -35,176 +32,232 @@
     </div>
 
     <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <div class="container mobileNav__inner">
-        <a class="mobileNav__link" href="#beispiele">Beispiele</a>
-        <a class="mobileNav__link" href="#leistungen">Leistungen</a>
-        <a class="mobileNav__link" href="#ablauf">Ablauf</a>
-        <a class="mobileNav__link" href="#faq">FAQ</a>
-        <a class="mobileNav__cta" href="#beispiele">Beispiele ansehen</a>
+      <div class="container mobileNavInner">
+        <a class="mobileNavLink" href="#gewerke">Gewerke</a>
+        <a class="mobileNavLink" href="#leistungen">Leistungen</a>
+        <a class="mobileNavLink" href="#ablauf">Ablauf</a>
+        <a class="mobileNavCta" href="#gewerke">Beispiele ansehen</a>
       </div>
     </div>
   </header>
 
-  <main id="content">
+  <main>
     <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <div class="pill">Für Solo Handwerker • Schnell online • Aufträge statt Leerlauf</div>
-
-          <h1 class="hero__h1">
-            Gute Arbeit verdient eine gute Website.
-          </h1>
-
-          <p class="hero__sub">
-            Modernes Design, klare Struktur, starke Vertrauenssignale.
-            So, dass Kunden anrufen statt weiter zu suchen.
+      <div class="heroBg" aria-hidden="true"></div>
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <div class="pill">Für Solo Handwerker. Klar. Schnell. Vertrauensstark.</div>
+          <h1 class="heroH1">Gute Arbeit verdient eine gute Website.</h1>
+          <p class="heroSub">
+            Du zeigst Kunden in Sekunden, dass du seriös bist. Damit sie anrufen statt weiter zu suchen.
           </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#beispiele">Beispiele ansehen</a>
-            <a class="btn btn--ghost" href="#leistungen">Was du bekommst</a>
+          <div class="heroActions">
+            <a class="btn btnPrimary" href="#gewerke">Gewerk wählen</a>
+            <a class="btn btnGhost" href="#leistungen">Was du bekommst</a>
           </div>
-
-          <div class="trust">
-            <div class="trust__item">
-              <div class="trust__num">48h</div>
-              <div class="trust__txt">erste Demo Seite</div>
+          <div class="trustRow">
+            <div class="trustItem">
+              <div class="trustNum">Klar</div>
+              <div class="trustTxt">Struktur die verkauft</div>
             </div>
-            <div class="trust__item">
-              <div class="trust__num">0€</div>
-              <div class="trust__txt">unverbindlich starten</div>
+            <div class="trustItem">
+              <div class="trustNum">Schnell</div>
+              <div class="trustTxt">saubere Ladezeiten</div>
             </div>
-            <div class="trust__item">
-              <div class="trust__num">Klar</div>
-              <div class="trust__txt">Text, Struktur, CTA</div>
+            <div class="trustItem">
+              <div class="trustNum">Stark</div>
+              <div class="trustTxt">Vertrauen sichtbar</div>
             </div>
           </div>
         </div>
 
-        <div class="hero__visual" aria-label="Vorschau Karten">
-          <div class="glassCard reveal">
-            <div class="glassCard__top">
-              <div class="dot dot--r"></div>
-              <div class="dot dot--y"></div>
-              <div class="dot dot--g"></div>
-              <div class="glassCard__title">Beispiel Website</div>
+        <div class="heroVisual">
+          <div class="previewCard">
+            <div class="previewTop">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="previewTitle">Vorschau pro Gewerk</span>
             </div>
-            <div class="glassCard__body">
-              <div class="mockLine w60"></div>
-              <div class="mockLine w85"></div>
-              <div class="mockLine w70"></div>
-              <div class="mockGrid">
-                <div class="mockTile"></div>
-                <div class="mockTile"></div>
-                <div class="mockTile"></div>
-                <div class="mockTile"></div>
+            <div class="previewBody">
+              <div class="line w70"></div>
+              <div class="line w90"></div>
+              <div class="line w60"></div>
+              <div class="grid2">
+                <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
               </div>
-              <div class="mockCTA">Kontakt aufnehmen</div>
+              <div class="miniCta">Beispielseite öffnen</div>
             </div>
           </div>
-
-          <div class="badge reveal" style="animation-delay:120ms">
-            <span class="badge__icon">✓</span>
-            <span class="badge__text">Professionell. Schnell. Auf Handwerk getrimmt.</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero__bg" aria-hidden="true"></div>
-    </section>
-
-    <section class="section" id="beispiele">
-      <div class="container">
-        <div class="section__head">
-          <h2>Beispiele für Gewerke</h2>
-          <p>Du klickst drauf und siehst, wie eine echte Seite für das Gewerk wirken kann.</p>
-        </div>
-
-        <div class="cards">
-          <a class="card reveal" href="maler.html">
-            <div class="card__top">
-              <div class="card__icon">🎨</div>
-              <div class="card__title">Malerbetrieb</div>
-            </div>
-            <div class="card__text">Saubere Referenzen, Vorher Nachher, schnelle Anfrage.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-
-          <a class="card reveal" href="elektriker.html" style="animation-delay:80ms">
-            <div class="card__top">
-              <div class="card__icon">⚡️</div>
-              <div class="card__title">Elektriker</div>
-            </div>
-            <div class="card__text">Notdienst, Leistungen, Vertrauen, klare Kontaktwege.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-
-          <a class="card reveal" href="sanitaer.html" style="animation-delay:160ms">
-            <div class="card__top">
-              <div class="card__icon">🚿</div>
-              <div class="card__title">Sanitär Heizung</div>
-            </div>
-            <div class="card__text">Wartung, Badmodernisierung, schnelle Termin Anfrage.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-
-          <a class="card reveal" href="garten.html" style="animation-delay:240ms">
-            <div class="card__top">
-              <div class="card__icon">🌿</div>
-              <div class="card__title">Garten Landschaft</div>
-            </div>
-            <div class="card__text">Projekte, Saison Angebote, simple Anfrage.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-
-          <a class="card reveal" href="dach.html" style="animation-delay:320ms">
-            <div class="card__top">
-              <div class="card__icon">🏠</div>
-              <div class="card__title">Dachdecker</div>
-            </div>
-            <div class="card__text">Sturm, Reparatur, Vertrauen, schnelle Notfall Kontaktierung.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-
-          <a class="card reveal" href="fliesen.html" style="animation-delay:400ms">
-            <div class="card__top">
-              <div class="card__icon">🧱</div>
-              <div class="card__title">Fliesenleger</div>
-            </div>
-            <div class="card__text">Referenzen, Stil, klare Anfrage mit Fotos.</div>
-            <div class="card__arrow">Ansehen →</div>
-          </a>
-        </div>
-
-        <div class="notice">
-          <div class="notice__title">Wichtig</div>
-          <div class="notice__text">Die Beispielseiten legen wir als eigene Dateien an. Du hast die Links schon drin.</div>
+          <div class="smallNote">Klicke ein Gewerk. Vorschau fährt in der Schaltfläche rein.</div>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="leistungen">
+    <section class="section" id="gewerke">
       <div class="container">
-        <div class="section__head">
-          <h2>Leistungen, die wirken</h2>
-          <p>Keine Show. Dinge, die Kunden wirklich überzeugen.</p>
+        <div class="sectionHead">
+          <h2>Wähle ein Gewerk</h2>
+          <p>Erster Klick zeigt die Vorschau. Zweiter Klick öffnet die Unterseite.</p>
         </div>
 
-        <div class="features">
-          <div class="feature reveal">
-            <div class="feature__title">Klare Struktur</div>
-            <div class="feature__text">Leistungen, Referenzen, Vertrauen, Kontakt. Ohne Umwege.</div>
+        <div class="tradeGrid">
+          <a class="tradeButton" href="maler.html" data-trade="maler" aria-label="Maler Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Malerbetrieb</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Malerbetrieb Vorschau" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Malerbetrieb</div>
+                <div class="tradeDesc">Saubere Referenzen. Vorher nachher. Vertrauen sofort sichtbar.</div>
+                <ul class="tradeList">
+                  <li>Leistungen klar gegliedert</li>
+                  <li>Galerie mit Projekten</li>
+                  <li>Schnelle Anfrage</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tradeButton" href="elektriker.html" data-trade="elektriker" aria-label="Elektriker Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Elektriker</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Elektriker Vorschau" src="https://images.unsplash.com/photo-1581091870622-2c10b4f05b32?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Elektriker</div>
+                <div class="tradeDesc">Notdienst sichtbar. Leistungen klar. Kontakt ohne Umwege.</div>
+                <ul class="tradeList">
+                  <li>Notfall Bereich oben</li>
+                  <li>Leistungsboxen</li>
+                  <li>Kontaktwege sofort</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tradeButton" href="sanitaer.html" data-trade="sanitaer" aria-label="Sanitär und Heizung Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Sanitär und Heizung</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Sanitär Vorschau" src="https://images.unsplash.com/photo-1581579185169-6a0c2a40c90f?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Sanitär und Heizung</div>
+                <div class="tradeDesc">Badmodernisierung und Wartung. Seriös und aufgeräumt.</div>
+                <ul class="tradeList">
+                  <li>Pakete und Leistungen</li>
+                  <li>Projektbeispiele</li>
+                  <li>Termin Anfrage</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tradeButton" href="dach.html" data-trade="dach" aria-label="Dachdecker Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Dachdecker</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Dachdecker Vorschau" src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Dachdecker</div>
+                <div class="tradeDesc">Sturm und Reparatur. Vertrauen und schnelle Hilfe sichtbar.</div>
+                <ul class="tradeList">
+                  <li>Notfall Kontakt</li>
+                  <li>Leistungsspektrum</li>
+                  <li>Referenzbilder</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tradeButton" href="garten.html" data-trade="garten" aria-label="Garten und Landschaft Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Garten und Landschaft</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Garten und Landschaft Vorschau" src="https://images.unsplash.com/photo-1523413455145-9c2f7b2b2b69?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Garten und Landschaft</div>
+                <div class="tradeDesc">Projekte im Fokus. Saison Angebote. Sauberer Look.</div>
+                <ul class="tradeList">
+                  <li>Projekt Galerie</li>
+                  <li>Leistungen pro Saison</li>
+                  <li>Anfrage einfach</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tradeButton" href="fliesen.html" data-trade="fliesen" aria-label="Fliesenleger Beispielseite öffnen">
+            <div class="tradeFront">
+              <div class="tradeName">Fliesenleger</div>
+              <div class="tradeHint">Klicken für Vorschau</div>
+            </div>
+            <div class="tradeSlide" aria-hidden="true">
+              <div class="tradeMedia">
+                <img alt="Fliesenleger Vorschau" src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80">
+              </div>
+              <div class="tradeInfo">
+                <div class="tradeTitle">Fliesenleger</div>
+                <div class="tradeDesc">Qualität zeigen. Materialien. Projekte. Klare Anfrage.</div>
+                <ul class="tradeList">
+                  <li>Referenzen im Raster</li>
+                  <li>Stil und Material</li>
+                  <li>Anfrage mit Fotos</li>
+                </ul>
+                <div class="tradeOpen">Beispielseite öffnen</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="leistungen">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Leistungen</h2>
+          <p>Direkt auf Solo Handwerker ausgelegt.</p>
+        </div>
+
+        <div class="featureGrid">
+          <div class="feature">
+            <div class="featureTitle">Vertrauen</div>
+            <div class="featureText">Referenzen, klare Aussagen, saubere Bilder, keine Bastel Optik.</div>
           </div>
-          <div class="feature reveal" style="animation-delay:80ms">
-            <div class="feature__title">Vertrauen sichtbar</div>
-            <div class="feature__text">Bilder, echte Beispiele, klare Aussagen, saubere Darstellung.</div>
+          <div class="feature">
+            <div class="featureTitle">Struktur</div>
+            <div class="featureText">Leistungen, Ablauf, Fragen, Kontakt. Ohne Umwege.</div>
           </div>
-          <div class="feature reveal" style="animation-delay:160ms">
-            <div class="feature__title">Schnell und sauber</div>
-            <div class="feature__text">Kurze Ladezeiten, gute Lesbarkeit, moderne Optik.</div>
+          <div class="feature">
+            <div class="featureTitle">Performance</div>
+            <div class="featureText">Schnell, leicht, sauber. Kein schwerer Müll.</div>
           </div>
-          <div class="feature reveal" style="animation-delay:240ms">
-            <div class="feature__title">Kontakt ohne Reibung</div>
-            <div class="feature__text">Button immer sichtbar, mehrere Wege: WhatsApp, Anruf, Formular.</div>
+          <div class="feature">
+            <div class="featureTitle">Kontakt</div>
+            <div class="featureText">Klare Call to Action, damit Anfragen reinkommen.</div>
           </div>
         </div>
       </div>
@@ -212,88 +265,52 @@
 
     <section class="section" id="ablauf">
       <div class="container">
-        <div class="section__head">
-          <h2>Ablauf in 3 Schritten</h2>
-          <p>Direkt, effizient, ohne Agentur Theater.</p>
+        <div class="sectionHead">
+          <h2>Ablauf</h2>
+          <p>Ohne Agentur Theater.</p>
         </div>
 
         <div class="steps">
-          <div class="step reveal">
-            <div class="step__num">1</div>
-            <div class="step__body">
-              <div class="step__title">Du schaust Beispiele</div>
-              <div class="step__text">Du sagst: so in die Richtung oder anders. Fertig.</div>
+          <div class="step">
+            <div class="stepNum">1</div>
+            <div class="stepBody">
+              <div class="stepTitle">Gewerk wählen</div>
+              <div class="stepText">Du klickst dich durch die Beispiele und sagst, was dir gefällt.</div>
             </div>
           </div>
-          <div class="step reveal" style="animation-delay:100ms">
-            <div class="step__num">2</div>
-            <div class="step__body">
-              <div class="step__title">Ich baue eine Demo</div>
-              <div class="step__text">Erste Version mit Design und Struktur. Du gibst Feedback.</div>
+          <div class="step">
+            <div class="stepNum">2</div>
+            <div class="stepBody">
+              <div class="stepTitle">Demo Version</div>
+              <div class="stepText">Ich baue die erste Version mit Struktur und Design.</div>
             </div>
           </div>
-          <div class="step reveal" style="animation-delay:200ms">
-            <div class="step__num">3</div>
-            <div class="step__body">
-              <div class="step__title">Live und startklar</div>
-              <div class="step__text">Feinschliff, Inhalte, Kontakt. Website online, fertig.</div>
+          <div class="step">
+            <div class="stepNum">3</div>
+            <div class="stepBody">
+              <div class="stepTitle">Live</div>
+              <div class="stepText">Feinschliff, Inhalte, Kontakt. Fertig online.</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="faq">
-      <div class="container">
-        <div class="section__head">
-          <h2>FAQ</h2>
-          <p>Die typischen Fragen, direkt beantwortet.</p>
+    <footer class="footer">
+      <div class="container footerInner">
+        <div>
+          <div class="footerBrand">Meisterseite</div>
+          <div class="footerSmall">Websites für Handwerker. Klar. Schnell. Vertrauensstark.</div>
         </div>
-
-        <div class="faq">
-          <details class="faq__item reveal">
-            <summary>Wie schnell geht das?</summary>
-            <div class="faq__content">Wenn Inhalte und Richtung klar sind, ist eine Demo sehr schnell drin. Danach feilen wir an Text und Referenzen.</div>
-          </details>
-
-          <details class="faq__item reveal" style="animation-delay:80ms">
-            <summary>Brauch ich Fotos?</summary>
-            <div class="faq__content">Eigene Fotos sind besser. Wenn nicht, starten wir mit passenden Platzhaltern und ersetzen später.</div>
-          </details>
-
-          <details class="faq__item reveal" style="animation-delay:160ms">
-            <summary>Kann ich später eine eigene Domain nutzen?</summary>
-            <div class="faq__content">Ja. Erst bauen wir die Seite. Domain und DNS machen wir danach sauber, sonst blockiert es dich nur.</div>
-          </details>
-        </div>
-
-        <div class="ctaPanel reveal" style="animation-delay:220ms">
-          <div class="ctaPanel__text">
-            <div class="ctaPanel__title">Als Nächstes: Beispiel auswählen</div>
-            <div class="ctaPanel__sub">Dann bauen wir darauf deine Variante.</div>
-          </div>
-          <a class="btn btn--primary" href="#beispiele">Beispiele ansehen</a>
+        <div class="footerLinks">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
-    </section>
+    </footer>
+
+    <a class="sticky" href="#gewerke" aria-label="Gewerk wählen">Beispiele</a>
   </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <div class="footer__brand">Meisterseite</div>
-        <div class="footer__small">Websites für Handwerker • Klar • Schnell • Vertrauensstark</div>
-      </div>
-      <div class="footer__links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
-
-  <a class="stickyContact" href="#beispiele" aria-label="Beispiele ansehen">
-    Beispiele
-  </a>
 
   <script src="script.js"></script>
 </body>
