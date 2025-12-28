@@ -21,32 +21,28 @@ if (navToggle && mobileNav) {
 const tradeButtons = document.querySelectorAll(".tradeButton");
 
 tradeButtons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
     const isOpen = btn.classList.contains("isOpen");
+    tradeButtons.forEach((b) => b.classList.remove("isOpen"));
+    if (!isOpen) btn.classList.add("isOpen");
+  });
 
-    if (!isOpen) {
+  const openBtn = btn.querySelector(".tradeOpen");
+  if (openBtn) {
+    openBtn.addEventListener("click", (e) => {
       e.preventDefault();
-
-      tradeButtons.forEach((b) => {
-        if (b !== btn) b.classList.remove("isOpen");
-      });
-
-      btn.classList.add("isOpen");
-      return;
-    }
-
-    btn.classList.remove("isOpen");
-  });
-
-  btn.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      btn.classList.remove("isOpen");
-    }
-  });
+      e.stopPropagation();
+      const href = btn.getAttribute("data-href");
+      if (href) window.location.href = href;
+    });
+  }
 });
 
 document.addEventListener("click", (e) => {
-  const inside = e.target.closest(".tradeButton");
-  if (inside) return;
+  if (e.target.closest(".tradeButton")) return;
   tradeButtons.forEach((b) => b.classList.remove("isOpen"));
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") tradeButtons.forEach((b) => b.classList.remove("isOpen"));
 });
