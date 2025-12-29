@@ -25,6 +25,21 @@
       <a class="navLink" href="#ablauf">Ablauf</a>
       <a class="navCta" href="#gewerke">Beispiele ansehen</a>
     </nav>
+
+    <!-- Mobile Toggle -->
+    <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobileNav" id="mobileNav" aria-hidden="true">
+    <div class="mobileNavInner container">
+      <a class="mobileNavLink" href="#gewerke">Gewerke</a>
+      <a class="mobileNavLink" href="#leistungen">Leistungen</a>
+      <a class="mobileNavLink" href="#ablauf">Ablauf</a>
+      <a class="mobileNavCta" href="#gewerke">Beispiele ansehen</a>
+    </div>
   </div>
 </header>
 
@@ -39,7 +54,7 @@
 
     <div class="tradeGrid">
 
-      <!-- MALER – MIT DEINEM BILD (OBEN LINKS) -->
+      <!-- MALER -->
       <a class="tradeCard" href="maler.html">
         <div class="tradeCardBg">
           <img src="images/maler.jpg" alt="Malerbetrieb">
@@ -53,8 +68,11 @@
         </div>
       </a>
 
-      <!-- ELEKTRIKER -->
+      <!-- ELEKTRIKER (jetzt mit lokalem Bild) -->
       <a class="tradeCard" href="elektriker.html">
+        <div class="tradeCardBg">
+          <img src="images/elektriker.jpg" alt="Elektriker">
+        </div>
         <div class="tradeCardContent">
           <div class="tradeCardTitle">Elektriker</div>
           <div class="tradeCardText">Notdienst Fokus, Leistungen, Kontakt sofort.</div>
@@ -64,8 +82,11 @@
         </div>
       </a>
 
-      <!-- SANITÄR -->
+      <!-- SANITÄR (jetzt mit lokalem Bild) -->
       <a class="tradeCard" href="sanitaer.html">
+        <div class="tradeCardBg">
+          <img src="images/sanitaer.jpg" alt="Sanitär und Heizung">
+        </div>
         <div class="tradeCardContent">
           <div class="tradeCardTitle">Sanitär und Heizung</div>
           <div class="tradeCardText">Pakete, Wartung, Badmodernisierung.</div>
@@ -75,10 +96,10 @@
         </div>
       </a>
 
-      <!-- DACHDECKER -->
+      <!-- DACHDECKER (jetzt mit lokalem Bild) -->
       <a class="tradeCard" href="dach.html">
         <div class="tradeCardBg">
-          <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1400&q=80" alt="Dachdecker">
+          <img src="images/dach.jpg" alt="Dachdecker">
         </div>
         <div class="tradeCardContent">
           <div class="tradeCardTitle">Dachdecker</div>
@@ -89,8 +110,11 @@
         </div>
       </a>
 
-      <!-- GARTEN -->
+      <!-- GARTEN (jetzt mit lokalem Bild) -->
       <a class="tradeCard" href="garten.html">
+        <div class="tradeCardBg">
+          <img src="images/garten.jpg" alt="Garten und Landschaft">
+        </div>
         <div class="tradeCardContent">
           <div class="tradeCardTitle">Garten und Landschaft</div>
           <div class="tradeCardText">Projektgalerie, Leistungen, Saison Angebote.</div>
@@ -100,7 +124,7 @@
         </div>
       </a>
 
-      <!-- FLIESENLEGER (UNTEN RECHTS, KEIN MALER MEHR) -->
+      <!-- FLIESENLEGER (kein lokales Bild vorhanden -> bleibt extern) -->
       <a class="tradeCard" href="fliesen.html">
         <div class="tradeCardBg">
           <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1400&q=80" alt="Fliesenleger">
@@ -133,7 +157,7 @@
 
 <a class="sticky" href="#gewerke">Beispiele</a>
 
+<script src="script.js"></script>
 </main>
 </body>
 </html>
-
