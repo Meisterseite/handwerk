@@ -1,4 +1,3 @@
-/* style.css */
 :root{
   --text:#0f1115;
   --muted:#5a6270;
@@ -28,7 +27,9 @@ body{
 a{color:inherit;text-decoration:none}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
-/* TOPBAR wie Kronedach */
+/* =========================
+   TOPBAR
+========================= */
 .topbar{
   position:sticky;
   top:0;
@@ -44,27 +45,44 @@ a{color:inherit;text-decoration:none}
   gap:18px;
 }
 
-/* Logo links */
+/* =========================
+   LOGO LINKS
+========================= */
 .brand{
   display:flex;
   align-items:center;
   gap:12px;
-  min-width:220px;
 }
+
 .brandLogo{
-  height:36px;
+  height:26px;
   width:auto;
   display:block;
+  object-fit:contain;
+  flex-shrink:0;
 }
+
 .brandText{
   display:flex;
   flex-direction:column;
   line-height:1.1;
 }
-.brandName{font-weight:900}
-.brandTag{font-size:12px;color:var(--navMuted);margin-top:3px}
 
-/* Nav Mitte */
+.brandName{
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:-.01em;
+}
+
+.brandTag{
+  font-size:12px;
+  color:var(--navMuted);
+  margin-top:2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 .nav{
   display:flex;
   align-items:center;
@@ -72,6 +90,7 @@ a{color:inherit;text-decoration:none}
   gap:26px;
   flex:1;
 }
+
 .navLink{
   position:relative;
   display:inline-block;
@@ -81,12 +100,14 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;
   color:var(--navText);
   opacity:.85;
-  transition:opacity .18s ease, transform .18s ease;
+  transition: color .18s ease, opacity .18s ease;
 }
+
 .navLink::after{
   content:"";
   position:absolute;
-  left:0;right:0;
+  left:0;
+  right:0;
   bottom:-10px;
   height:2px;
   background:var(--brandRed);
@@ -94,49 +115,32 @@ a{color:inherit;text-decoration:none}
   transform-origin:left;
   transition:transform .22s ease;
 }
-.navLink:hover{opacity:1}
-.navLink:hover::after{transform:scaleX(1)}
-.navLink.isActive{opacity:1}
-.navLink.isActive::after{transform:scaleX(0)} /* aktiv ohne Strich wie du wolltest */
 
-/* rechts Telefon */
-.topRight{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width:240px;
-  justify-content:flex-end;
+/* Hover: ROT + STRICH */
+.navLink:hover{
+  color:var(--brandRed);
+  opacity:1;
 }
-.phoneBlock{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  line-height:1.1;
+.navLink:hover::after{
+  transform:scaleX(1);
 }
-.phoneNum{
-  font-weight:900;
-  font-size:18px;
-  letter-spacing:.02em;
-}
-.phoneSub{
-  font-size:12px;
-  color:var(--navMuted);
-  margin-top:3px;
-}
-.phoneBtn{
-  width:44px;height:44px;
-  border-radius:999px;
-  background:var(--brandRed);
-  display:grid;
-  place-items:center;
-  box-shadow:0 14px 30px rgba(209,13,31,.25);
-}
-.phoneBtn svg{width:20px;height:20px;fill:#fff}
 
-/* Mobile Nav */
+/* Aktiv: ROT, aber KEIN Strich */
+.navLink.isActive{
+  color:var(--brandRed);
+  opacity:1;
+}
+.navLink.isActive::after{
+  transform:scaleX(0);
+}
+
+/* =========================
+   MOBILE NAV
+========================= */
 .navToggle{
   display:none;
-  width:44px;height:44px;
+  width:44px;
+  height:44px;
   border:1px solid rgba(15,17,21,.12);
   background:#fff;
   border-radius:12px;
@@ -145,16 +149,26 @@ a{color:inherit;text-decoration:none}
   gap:5px;
   cursor:pointer;
 }
-.navToggle span{display:block;width:18px;height:2px;background:#111827;border-radius:2px}
+.navToggle span{
+  display:block;
+  width:18px;
+  height:2px;
+  background:#111827;
+  border-radius:2px;
+}
 
 .mobileNav{
   display:none;
   border-top:1px solid rgba(15,17,21,.08);
   background:#fff;
 }
-.mobileNavInner{padding:14px 24px 18px;display:grid;gap:10px}
+.mobileNavInner{
+  padding:14px 24px 18px;
+  display:grid;
+  gap:10px;
+}
 .mobileNavLink{
-  padding:12px 12px;
+  padding:12px;
   border-radius:12px;
   border:1px solid rgba(15,17,21,.10);
   background:#fff;
@@ -162,324 +176,10 @@ a{color:inherit;text-decoration:none}
   font-weight:800;
 }
 
-/* HERO wie Kronedach */
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height:520px;
-  display:flex;
-  align-items:stretch;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg, var(--heroOverlay) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.10) 100%),
-    url("images/hintergrund.jpg") center / cover no-repeat;
-  z-index:0;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,0) 55%);
-  z-index:0;
-}
-
-.heroInner{
-  position:relative;
-  z-index:2;
-  padding:64px 0 56px;
-  width:100%;
-}
-.heroGrid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap:34px;
-  align-items:start;
-}
-.heroLeft{
-  padding-top:10px;
-}
-.heroBadge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.18);
-  color:#fff;
-  padding:10px 12px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:12px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.heroH1{
-  margin:18px 0 14px;
-  font-size:58px;
-  line-height:1.02;
-  letter-spacing:-.02em;
-  color:#fff;
-  max-width:18ch;
-}
-.heroSub{
-  margin:0;
-  color:rgba(255,255,255,.85);
-  font-size:16px;
-  max-width:56ch;
-}
-
-/* Formular Karte rechts */
-.formCard{
-  background:#fff;
-  border:1px solid rgba(15,17,21,.08);
-  box-shadow:0 18px 50px rgba(0,0,0,.12);
-  padding:26px 26px 22px;
-}
-.formTitle{
-  font-size:18px;
-  font-weight:900;
-  margin:0 0 14px;
-  color:#111827;
-}
-.formGrid{display:grid;gap:12px}
-.input{
-  width:100%;
-  padding:14px 14px;
-  border-radius:10px;
-  border:1px solid rgba(15,17,21,.12);
-  background:#f7f7f8;
-  outline:none;
-  font-size:14px;
-}
-.input:focus{
-  background:#fff;
-  border-color:rgba(209,13,31,.55);
-  box-shadow:0 0 0 4px rgba(209,13,31,.12);
-}
-.textarea{min-height:110px;resize:vertical}
-
-.checkRow{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  margin-top:4px;
-  color:#6b7280;
-  font-size:12px;
-  line-height:1.35;
-}
-.checkRow input{margin-top:2px}
-.formBtn{
-  margin-top:10px;
-  width:100%;
-  padding:14px 14px;
-  border-radius:0;
-  border:none;
-  background:var(--brandRed);
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.02em;
-  cursor:pointer;
-}
-.formBtn:hover{filter:brightness(.96)}
-
-/* Roter Banner unter Hero */
-.ribbon{
-  background:var(--brandRed);
-  color:#fff;
-}
-.ribbonInner{
-  display:flex;
-  gap:26px;
-  align-items:center;
-  justify-content:center;
-  padding:18px 0;
-  flex-wrap:wrap;
-}
-.ribbonItem{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:800;
-  font-size:14px;
-  opacity:.95;
-}
-.ribbonItem svg{width:18px;height:18px;fill:#fff}
-
-/* Intro Section wie Screenshot */
-.section{padding:56px 0}
-.introGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-.introH2{
-  margin:0 0 10px;
-  font-size:38px;
-  letter-spacing:-.02em;
-  line-height:1.08;
-}
-.introP{
-  margin:0;
-  color:var(--muted);
-  max-width:60ch;
-}
-.introMedia{
-  overflow:hidden;
-  border-radius:0;
-  background:#000;
-  aspect-ratio: 16 / 9;
-  box-shadow:0 18px 50px rgba(0,0,0,.10);
-}
-.introMedia img{width:100%;height:100%;object-fit:cover;display:block}
-
-/* Gewerke Section */
-.sectionHead{margin-bottom:18px}
-.sectionHead h2{margin:0 0 6px;font-size:30px;letter-spacing:-.01em}
-.sectionHead p{margin:0;color:var(--muted)}
-
-/* Gewerke Kacheln exakt wie bei dir */
-.tradeGrid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:22px;
-  margin-top:18px;
-}
-.tradeCard{
-  position:relative;
-  display:block;
-  overflow:hidden;
-  background:#000;
-  aspect-ratio:16 / 9;
-  border-radius:0;
-}
-.tradeImg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition: filter .22s ease;
-  filter:saturate(1.02) contrast(1.02);
-}
-.tradeShade{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,.55) 0%,
-    rgba(0,0,0,.18) 45%,
-    rgba(0,0,0,0) 70%
-  );
-  transition: background .22s ease;
-}
-.tradeLabel{
-  position:absolute;
-  left:18px;
-  bottom:16px;
-  color:#fff;
-  font-size:34px;
-  font-weight:500;
-  letter-spacing:.01em;
-  text-shadow:0 8px 24px rgba(0,0,0,.45);
-  line-height:1.05;
-  z-index:2;
-}
-.tradeHover{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  transform: translateY(6px);
-  transition: opacity .18s ease, transform .18s ease;
-  z-index:3;
-  pointer-events:none;
-}
-.tradeHoverBtn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 14px;
-  border-radius:0;
-  background:rgba(255,255,255,.92);
-  color:#111827;
-  font-weight:800;
-  font-size:14px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-}
-.tradeCard:hover .tradeImg{filter:brightness(.70) saturate(1.02) contrast(1.03)}
-.tradeCard:hover .tradeShade{background:rgba(0,0,0,.35)}
-.tradeCard:hover .tradeHover{opacity:1; transform: translateY(0)}
-
-/* Footer */
-.footer{border-top:1px solid rgba(15,17,21,.08);padding:26px 0}
-.footerInner{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
-.footerBrand{font-weight:900}
-.footerSmall{color:var(--muted);font-size:13px;margin-top:6px}
-.footerLinks{display:flex;gap:14px}
-.footerLinks a{color:#1b2230;opacity:.85}
-.footerLinks a:hover{opacity:1}
-
-/* Sticky */
-.sticky{
-  position:fixed;right:18px;bottom:18px;z-index:60;
-  padding:12px 14px;border-radius:16px;
-  background:#111827;
-  color:#fff;font-weight:900;
-  box-shadow:0 14px 34px rgba(17,24,39,.26);
-  transition: transform .18s ease, opacity .18s ease;
-}
-.sticky:hover{transform: translateY(-2px)}
-
-/* Mail Kreis */
-.mailFab{
-  position:fixed;
-  right:18px;
-  top:50%;
-  transform: translateY(-50%);
-  width:56px;
-  height:56px;
-  border-radius:999px;
-  background:#111827;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 16px 40px rgba(0,0,0,.22);
-  z-index:80;
-  border:1px solid rgba(255,255,255,.10);
-  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
-}
-.mailFab:hover{
-  transform: translateY(-50%) scale(1.03);
-  box-shadow:0 22px 55px rgba(0,0,0,.26);
-}
-.mailFab:active{transform: translateY(-50%) scale(.99)}
-.mailFabIcon{width:24px;height:24px;fill: currentColor}
-
-/* Responsive */
-@media (max-width: 1100px){
-  .heroH1{font-size:48px}
-  .heroGrid{grid-template-columns:1fr;gap:18px}
-  .introGrid{grid-template-columns:1fr}
-  .tradeGrid{grid-template-columns:repeat(2,1fr)}
-  .tradeLabel{font-size:30px}
-  .topRight{display:none}
-}
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 980px){
   .nav{display:none}
   .navToggle{display:flex}
-}
-@media (max-width: 640px){
-  .hero{min-height:unset}
-  .heroInner{padding:44px 0 40px}
-  .heroH1{font-size:38px}
-  .tradeGrid{grid-template-columns:1fr;gap:16px}
-  .tradeLabel{font-size:28px;left:14px;bottom:14px}
 }
