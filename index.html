@@ -1,14 +1,16 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meisterseite – Websites für Handwerker</title>
   <meta name="description" content="Moderne Websites für Handwerker. Beispiele pro Gewerk als Unterseiten." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css?v=12" />
 </head>
 
@@ -27,7 +29,7 @@
       <a class="navLink" href="#gewerke">Gewerke</a>
       <a class="navLink" href="#leistungen">Leistungen</a>
       <a class="navLink" href="#ablauf">Ablauf</a>
-      <a class="navCta" href="#gewerke">Beispiele ansehen</a>
+      <a class="navCta navLink" href="#gewerke">Beispiele ansehen</a>
     </nav>
 
     <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
@@ -46,195 +48,189 @@
 </header>
 
 <main>
+  <section class="hero" id="top">
+    <div class="heroBg" aria-hidden="true"></div>
 
-<section class="hero" id="top">
-  <div class="heroBg" aria-hidden="true"></div>
-
-  <div class="container heroGrid">
-    <div>
-      <div class="pill">Meisterseite • Websites für Handwerker</div>
-      <h1 class="heroH1">Gute Arbeit verdient eine gute Website.</h1>
-      <p class="heroSub">
-        Klare Struktur, schnelle Anfrage, Vertrauen auf den ersten Blick.
-        Du bekommst eine professionelle Seite, die zu deinem Gewerk passt.
-      </p>
-
-      <div class="heroActions">
-        <a class="btn btnPrimary" href="#gewerke">Beispiele ansehen</a>
-        <a class="btn btnGhost" href="#leistungen">Leistungen</a>
-      </div>
-
-      <div class="trustRow">
-        <div class="trustItem">
-          <div class="trustNum">1 bis 3 Tage</div>
-          <div class="trustTxt">erste Demo Version</div>
-        </div>
-        <div class="trustItem">
-          <div class="trustNum">Klarer Aufbau</div>
-          <div class="trustTxt">ohne Schnickschnack</div>
-        </div>
-        <div class="trustItem">
-          <div class="trustNum">Direkt Kontakt</div>
-          <div class="trustTxt">Anruf, Mail, WhatsApp</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="gewerke">
-  <div class="container">
-
-    <div class="sectionHead">
-      <h2>Gewerke</h2>
-      <p>Klick öffnet die Beispielseite.</p>
-    </div>
-
-    <!-- NEU: Text links + Bild rechts (website.jpg) -->
-    <div class="gewerkeIntro">
-      <div class="gewerkeText">
-        <h3 class="gewerkeTitle">Beispielseiten, die Vertrauen schaffen</h3>
-        <p class="gewerkeCopy">
-          Jede Beispielseite ist auf ein Gewerk zugeschnitten.
-          Klarer Aufbau, starke Bilder, direkte Kontaktwege.
-          So sieht der Kunde auf den ersten Blick, dass du professionell arbeitest.
+    <div class="container heroGrid">
+      <div class="heroLeft">
+        <div class="pill">Meisterseite • Websites für Handwerker</div>
+        <h1 class="heroH1">Gute Arbeit verdient eine gute Website.</h1>
+        <p class="heroSub">
+          Klare Struktur, schnelle Anfrage, Vertrauen auf den ersten Blick.
+          Du bekommst eine professionelle Seite, die zu deinem Gewerk passt.
         </p>
-        <div class="gewerkeActions">
+
+        <div class="heroActions">
           <a class="btn btnPrimary" href="#gewerke">Beispiele ansehen</a>
           <a class="btn btnGhost" href="#leistungen">Leistungen</a>
         </div>
-      </div>
 
-      <div class="gewerkeMedia" aria-hidden="true">
-        <img src="images/website.jpg" alt="Website Vorschau">
-      </div>
-    </div>
-
-    <div class="tradeGrid">
-
-      <a class="tradeCard" href="maler.html">
-        <img class="tradeImg" src="images/maler.jpg" alt="Malerbetrieb">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Malerbetrieb</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-      <a class="tradeCard" href="schreiner.html">
-        <img class="tradeImg" src="images/schreiner.jpg" alt="Schreiner">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Schreiner</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-      <a class="tradeCard" href="sanitaer.html">
-        <img class="tradeImg" src="images/sanitaer.jpg" alt="Sanitär und Heizung">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Sanitär &amp; Heizung</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-      <a class="tradeCard" href="dach.html">
-        <img class="tradeImg" src="images/dach.jpg" alt="Dachdecker">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Dachdecker</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-      <a class="tradeCard" href="elektriker.html">
-        <img class="tradeImg" src="images/elektriker.jpg" alt="Elektriker">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Elektriker</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-      <a class="tradeCard" href="garten.html">
-        <img class="tradeImg" src="images/garten.jpg" alt="Garten und Landschaft">
-        <div class="tradeShade" aria-hidden="true"></div>
-        <div class="tradeLabel">Garten &amp; Landschaft</div>
-        <div class="tradeBtn" aria-hidden="true"><span>Beispielseite öffnen</span></div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="leistungen">
-  <div class="container">
-    <div class="sectionHead">
-      <h2>Leistungen</h2>
-      <p>Was du bekommst. Klar, schnell, ohne Umwege.</p>
-    </div>
-
-    <div class="featureGrid">
-      <div class="feature">
-        <div class="featureTitle">Design und Struktur</div>
-        <div class="featureText">Modern, ruhig, passend zum Betrieb. Fokus auf Vertrauen und Anfrage.</div>
-      </div>
-      <div class="feature">
-        <div class="featureTitle">Mobile Optimierung</div>
-        <div class="featureText">Schnell lesbar auf dem Handy. Buttons für Kontakt immer sichtbar.</div>
-      </div>
-      <div class="feature">
-        <div class="featureTitle">Kontakt Setup</div>
-        <div class="featureText">Anrufen, Mail, WhatsApp, Formular. Alles sauber verlinkt.</div>
-      </div>
-      <div class="feature">
-        <div class="featureTitle">Hosting und Launch</div>
-        <div class="featureText">Auf Wunsch: Domain, GitHub Pages oder eigenes Hosting. Live Schaltung inklusive.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="ablauf">
-  <div class="container">
-    <div class="sectionHead">
-      <h2>Ablauf</h2>
-      <p>So läuft es ab. Ohne Chaos.</p>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="stepNum">1</div>
-        <div>
-          <div class="stepTitle">Kurz abstimmen</div>
-          <div class="stepText">Gewerk, Ziel, Stil. Dann starte ich mit der ersten Version.</div>
+        <div class="trustRow">
+          <div class="trustItem">
+            <div class="trustNum">1 bis 3 Tage</div>
+            <div class="trustTxt">erste Demo Version</div>
+          </div>
+          <div class="trustItem">
+            <div class="trustNum">Klarer Aufbau</div>
+            <div class="trustTxt">ohne Schnickschnack</div>
+          </div>
+          <div class="trustItem">
+            <div class="trustNum">Direkt Kontakt</div>
+            <div class="trustTxt">Anruf, Mail, WhatsApp</div>
+          </div>
         </div>
       </div>
-      <div class="step">
-        <div class="stepNum">2</div>
-        <div>
-          <div class="stepTitle">Demo ansehen</div>
-          <div class="stepText">Du bekommst eine klickbare Demo und sagst, was angepasst werden soll.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="stepNum">3</div>
-        <div>
-          <div class="stepTitle">Final und live</div>
-          <div class="stepText">Feinschliff, Texte, Bilder. Dann geht die Seite online.</div>
+
+      <div class="heroRight" aria-hidden="true">
+        <div class="heroMedia">
+          <img src="images/website.jpg" alt="" />
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container footerInner">
-    <div>
-      <div class="footerBrand">Meisterseite</div>
-      <div class="footerSmall">Websites für Handwerker. Klar. Schnell. Vertrauensstark.</div>
+  <section class="section" id="gewerke">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Gewerke</h2>
+        <p>Klick öffnet die Beispielseite.</p>
+      </div>
+
+      <div class="tradeGrid">
+        <a class="tradeCard" href="maler.html">
+          <img class="tradeImg" src="images/maler.jpg" alt="Malerbetrieb">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Malerbetrieb</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+
+        <a class="tradeCard" href="schreiner.html">
+          <img class="tradeImg" src="images/schreiner.jpg" alt="Schreinerei">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Schreinerei</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+
+        <a class="tradeCard" href="sanitaer.html">
+          <img class="tradeImg" src="images/sanitaer.jpg" alt="Sanitär und Heizung">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Sanitär &amp; Heizung</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+
+        <a class="tradeCard" href="dach.html">
+          <img class="tradeImg" src="images/dach.jpg" alt="Dachdecker">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Dachdecker</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+
+        <a class="tradeCard" href="elektriker.html">
+          <img class="tradeImg" src="images/elektriker.jpg" alt="Elektriker">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Elektriker</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+
+        <a class="tradeCard" href="fliesen.html">
+          <img class="tradeImg" src="images/fliesen.jpg" alt="Fliesenleger">
+          <div class="tradeShade" aria-hidden="true"></div>
+          <div class="tradeLabel">Fliesenleger</div>
+          <div class="tradeHover" aria-hidden="true">
+            <div class="tradeHoverBtn">Beispielseite öffnen</div>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="footerLinks">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
+  </section>
+
+  <section class="section alt" id="leistungen">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Leistungen</h2>
+        <p>Was du bekommst. Klar, schnell, ohne Umwege.</p>
+      </div>
+
+      <div class="featureGrid">
+        <div class="feature">
+          <div class="featureTitle">Design und Struktur</div>
+          <div class="featureText">Modern, ruhig, passend zum Betrieb. Fokus auf Vertrauen und Anfrage.</div>
+        </div>
+        <div class="feature">
+          <div class="featureTitle">Mobile Optimierung</div>
+          <div class="featureText">Schnell lesbar auf dem Handy. Buttons für Kontakt immer sichtbar.</div>
+        </div>
+        <div class="feature">
+          <div class="featureTitle">Kontakt Setup</div>
+          <div class="featureText">Anrufen, Mail, WhatsApp, Formular. Alles sauber verlinkt.</div>
+        </div>
+        <div class="feature">
+          <div class="featureTitle">Hosting und Launch</div>
+          <div class="featureText">Auf Wunsch: Domain, GitHub Pages oder eigenes Hosting. Live Schaltung inklusive.</div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<a class="sticky" href="#gewerke">Beispiele</a>
+  <section class="section" id="ablauf">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>Ablauf</h2>
+        <p>So läuft es ab. Ohne Chaos.</p>
+      </div>
 
-<script src="script.js?v=12"></script>
+      <div class="steps">
+        <div class="step">
+          <div class="stepNum">1</div>
+          <div>
+            <div class="stepTitle">Kurz abstimmen</div>
+            <div class="stepText">Gewerk, Ziel, Stil. Dann starte ich mit der ersten Version.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="stepNum">2</div>
+          <div>
+            <div class="stepTitle">Demo ansehen</div>
+            <div class="stepText">Du bekommst eine klickbare Demo und sagst, was angepasst werden soll.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="stepNum">3</div>
+          <div>
+            <div class="stepTitle">Final und live</div>
+            <div class="stepText">Feinschliff, Texte, Bilder. Dann geht die Seite online.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footerInner">
+      <div>
+        <div class="footerBrand">Meisterseite</div>
+        <div class="footerSmall">Websites für Handwerker. Klar. Schnell. Vertrauensstark.</div>
+      </div>
+      <div class="footerLinks">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="sticky" href="#gewerke">Beispiele</a>
+
+  <script src="script.js?v=12"></script>
 </main>
 </body>
 </html>
