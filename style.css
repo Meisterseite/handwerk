@@ -1,8 +1,4 @@
-*{
-  box-sizing:border-box;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-}
-
+/* style.css */
 :root{
   --text:#0f1115;
   --muted:#5a6270;
@@ -13,7 +9,7 @@
   --radius2:26px;
   --ink:#111827;
 
-  /* Beige Bar wie Screenshot */
+  /* Beige Bar */
   --bar:#7a756f;
   --barText:rgba(255,255,255,.72);
   --barTextActive:rgba(255,255,255,.92);
@@ -46,7 +42,7 @@ a{color:inherit;text-decoration:none}
   gap:18px;
 }
 
-/* Brand auf beige Bar */
+/* Brand */
 .brand{display:flex;align-items:center;gap:12px}
 .brandMark{
   width:40px;height:40px;border-radius:12px;
@@ -59,7 +55,7 @@ a{color:inherit;text-decoration:none}
 .brandName{font-weight:900;color:#fff}
 .brandTag{font-size:12px;color:rgba(255,255,255,.70);margin-top:3px}
 
-/* Nav in Bar: uppercase + underline left->right */
+/* Nav: underline left->right */
 .nav{
   display:flex;
   align-items:center;
@@ -81,8 +77,7 @@ a{color:inherit;text-decoration:none}
 .navLink::after{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
+  left:0; right:0;
   bottom:-10px;
   height:2px;
   background:var(--barLine);
@@ -90,22 +85,12 @@ a{color:inherit;text-decoration:none}
   transform-origin:left;
   transition:transform .22s ease;
 }
-.navLink:hover{
-  color:var(--barTextActive);
-}
-.navLink:hover::after{
-  transform:scaleX(1);
-}
+.navLink:hover{color:var(--barTextActive)}
+.navLink:hover::after{transform:scaleX(1)}
+.navCta{color:var(--barTextActive)}
+.navCta::after{transform:scaleX(1)}
 
-/* CTA als normaler Punkt in Bar (kein Buttonlook) */
-.navCta{
-  color:var(--barTextActive);
-}
-.navCta::after{
-  transform:scaleX(1);
-}
-
-/* Mobile Toggle auf Bar */
+/* Mobile Toggle */
 .navToggle{
   display:none;
   width:44px;height:44px;
@@ -145,7 +130,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /* Hero */
-.hero{position:relative;padding:64px 0 28px;overflow:hidden}
+.hero{position:relative;padding:56px 0 26px;overflow:hidden}
 .heroBg{
   position:absolute;inset:-200px -200px auto -200px;
   height:520px;
@@ -156,7 +141,12 @@ a{color:inherit;text-decoration:none}
   filter: blur(10px);
   pointer-events:none;
 }
-.heroGrid{display:grid;grid-template-columns:1fr;gap:42px;align-items:center}
+.heroGrid{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap:38px;
+  align-items:center;
+}
 .pill{
   display:inline-flex;align-items:center;
   font-size:12px;padding:8px 12px;
@@ -191,68 +181,35 @@ a{color:inherit;text-decoration:none}
 .trustNum{font-weight:900;font-size:18px}
 .trustTxt{font-size:13px;color:var(--muted);margin-top:2px}
 
+/* Hero right image */
+.heroMedia{
+  border-radius: 0;
+  overflow:hidden;
+  background:#000;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+}
+.heroMedia img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 /* Sections */
-.section{padding:68px 0}
-.sectionHead{margin-bottom:22px}
+.section{padding:56px 0}
+.sectionHead{margin-bottom:18px}
 .sectionHead h2{margin:0 0 6px;font-size:30px;letter-spacing:-.01em}
 .sectionHead p{margin:0;color:var(--muted)}
 .alt{background:#fafbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-/* ===== NEU: Text links + Bild rechts über den Kacheln ===== */
-.gewerkeIntro{
-  display:grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap:34px;
-  align-items:center;
-  margin: 24px 0 30px;
-}
-
-.gewerkeTitle{
-  margin:0 0 10px;
-  font-size:40px;
-  line-height:1.06;
-  letter-spacing:-.02em;
-}
-
-.gewerkeCopy{
-  margin:0 0 18px;
-  font-size:16px;
-  color:#2d3646;
-  max-width:60ch;
-}
-
-.gewerkeActions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.gewerkeMedia{
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow: var(--shadow2);
-  background:#fff;
-}
-
-.gewerkeMedia img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-}
-
-/* =========================================================
-   GEWERKE KACHELN
-   Hover: dunkler + Button
-   ========================================================= */
+/* Gewerke Kacheln: kein Zoom, nur dunkler + Button */
 .tradeGrid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:22px;
   margin-top:18px;
 }
-
 .tradeCard{
   position:relative;
   display:block;
@@ -261,7 +218,6 @@ a{color:inherit;text-decoration:none}
   aspect-ratio:16 / 9;
   border-radius:0;
 }
-
 .tradeImg{
   position:absolute;
   inset:0;
@@ -269,24 +225,20 @@ a{color:inherit;text-decoration:none}
   height:100%;
   object-fit:cover;
   display:block;
-
-  transform:none;
+  transition: filter .22s ease;
   filter:saturate(1.02) contrast(1.02);
-  transition: filter .25s ease;
 }
-
 .tradeShade{
   position:absolute;
   inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,.40) 0%,
-    rgba(0,0,0,.12) 45%,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.18) 45%,
     rgba(0,0,0,0) 70%
   );
-  transition: background .25s ease;
+  transition: background .22s ease;
 }
-
 .tradeLabel{
   position:absolute;
   left:18px;
@@ -300,42 +252,34 @@ a{color:inherit;text-decoration:none}
   z-index:2;
 }
 
-/* Button Overlay */
-.tradeBtn{
+.tradeHover{
   position:absolute;
   inset:0;
   display:flex;
   align-items:center;
   justify-content:center;
   opacity:0;
-  transition: opacity .25s ease;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
   z-index:3;
   pointer-events:none;
 }
-
-.tradeBtn span{
+.tradeHoverBtn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:12px 18px;
-  background:rgba(0,0,0,.78);
-  color:#fff;
-  font-size:13px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  border:1px solid rgba(255,255,255,.35);
+  padding:12px 14px;
+  border-radius:0;
+  background:rgba(255,255,255,.92);
+  color:#111827;
+  font-weight:800;
+  font-size:14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
 }
 
-/* Hover */
-.tradeCard:hover .tradeImg{
-  filter:brightness(.55) saturate(1.02) contrast(1.02);
-}
-.tradeCard:hover .tradeShade{
-  background:rgba(0,0,0,.35);
-}
-.tradeCard:hover .tradeBtn{
-  opacity:1;
-}
+.tradeCard:hover .tradeImg{filter:brightness(.70) saturate(1.02) contrast(1.03)}
+.tradeCard:hover .tradeShade{background:rgba(0,0,0,.35)}
+.tradeCard:hover .tradeHover{opacity:1; transform: translateY(0)}
 
 /* Feature grid */
 .featureGrid{display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;margin-top:18px}
@@ -371,29 +315,20 @@ a{color:inherit;text-decoration:none}
 
 /* Responsive */
 @media (max-width: 1100px){
-  .gewerkeTitle{font-size:34px}
+  .heroGrid{grid-template-columns:1fr;gap:18px}
   .tradeGrid{grid-template-columns:repeat(2,1fr)}
   .tradeLabel{font-size:30px}
 }
-
 @media (max-width: 980px){
-  .heroGrid{grid-template-columns:1fr;gap:18px}
   .heroH1{font-size:42px}
   .nav{display:none}
   .navToggle{display:flex}
   .featureGrid{grid-template-columns:1fr}
-
-  .gewerkeIntro{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
 }
-
 @media (max-width: 640px){
   .tradeGrid{grid-template-columns:1fr;gap:16px}
   .tradeLabel{font-size:28px;left:14px;bottom:14px}
 }
-
 @media (max-width: 560px){
   .hero{padding:44px 0 18px}
   .heroH1{font-size:36px}
