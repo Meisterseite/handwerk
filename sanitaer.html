@@ -1,142 +1,124 @@
-<!-- sanitaer.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sanitär und Heizung – Beispielseite | Meisterseite</title>
-  <meta name="description" content="Beispielseite für Sanitär und Heizung: Wartung, Reparatur, Pakete und Kontakt." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Sanitär & Heizung – Beispielseite | Meisterseite</title>
+  <meta name="description" content="Beispielseite für Sanitär & Heizung: Leistungen, Projektierung, Über uns und Kontakt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=40" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbarInner">
-      <a class="brand" href="index.html" aria-label="Zur Startseite">
-        <span class="brandMark">M</span>
-        <span class="brandText">
-          <span class="brandName">Meisterseite</span>
-          <span class="brandTag">Beispielseite Sanitär und Heizung</span>
-        </span>
-      </a>
 
-      <nav class="nav" aria-label="Navigation">
-        <a class="navLink" href="index.html#gewerke">Zurück</a>
-        <a class="navLink" href="#leistungen">Leistungen</a>
-        <a class="navLink" href="#pakete">Pakete</a>
-        <a class="navCta" href="#kontakt">Kontakt</a>
-      </nav>
+<header class="subTopbar">
+  <div class="container subTopbarInner">
+    <a class="subBrand" href="index.html" aria-label="Zur Startseite">
+      <img src="images/logo.jpg" alt="Meisterseite Logo">
+      <span class="subBrandText">
+        <span class="subBrandName">Meisterseite</span>
+        <span class="subBrandTag">Beispielseite Sanitär & Heizung</span>
+      </span>
+    </a>
 
-      <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <nav class="subNav" aria-label="Navigation">
+      <a href="#home" class="isActive">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#projektierung">Projektierung</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="pageHead">
+    <div class="container">
+      <div class="pageKicker">Sanitär & Heizung Beispielseite</div>
+      <h1 class="pageTitle">Unsere<br>Leistungen</h1>
     </div>
+  </section>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <div class="container mobileNavInner">
-        <a class="mobileNavLink" href="index.html#gewerke">Zurück</a>
-        <a class="mobileNavLink" href="#leistungen">Leistungen</a>
-        <a class="mobileNavLink" href="#pakete">Pakete</a>
-        <a class="mobileNavCta" href="#kontakt">Kontakt</a>
+  <section class="blocks" id="leistungen">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/sanitaer.jpg" alt="Sanitär"></div>
+        <div class="blockText">
+          <h2 class="blockH">Sanitär</h2>
+          <p class="blockP">Bad, Armaturen, Leitungen. Sauber installiert, sauber übergeben.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/sanitaer.jpg" alt="Heizung"></div>
+        <div class="blockText">
+          <h2 class="blockH">Heizung</h2>
+          <p class="blockP">Wartung, Austausch, Optimierung. Fokus auf Funktion, Effizienz und Zuverlässigkeit.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" style="padding-bottom:18px">
-      <div class="heroBg" aria-hidden="true"></div>
-      <div class="container heroGrid">
-        <div class="heroCopy">
-          <div class="pill">Sanitär und Heizung</div>
-          <h1 class="heroH1">Wartung, Reparatur, Modernisierung. Planbar und sauber.</h1>
-          <p class="heroSub">Pakete für Klarheit. Leistungen die man versteht. Kontakt sofort.</p>
-          <div class="heroActions">
-            <a class="btn btnPrimary" href="#kontakt">Termin anfragen</a>
-            <a class="btn btnGhost" href="#pakete">Pakete ansehen</a>
-          </div>
-          <div class="trustRow">
-            <div class="trustItem"><div class="trustNum">Planbar</div><div class="trustTxt">Pakete statt Chaos</div></div>
-            <div class="trustItem"><div class="trustNum">Sauber</div><div class="trustTxt">Dokumentiert und klar</div></div>
-            <div class="trustItem"><div class="trustNum">Modern</div><div class="trustTxt">Bad und Heizung</div></div>
-          </div>
-        </div>
-
-        <div class="heroVisual">
-          <div class="previewCard">
-            <div class="previewTop">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-              <span class="previewTitle">Projektbild</span>
-            </div>
-            <div class="previewBody">
-              <img alt="Sanitär und Heizung" style="width:100%;height:240px;object-fit:cover;border-radius:18px;border:1px solid rgba(15,17,21,.10)"
-                src="https://images.unsplash.com/photo-1581579185169-6a0c2a40c90f?auto=format&fit=crop&w=1400&q=80">
-              <div style="margin-top:12px;color:#334155;font-size:14px">Beispiel: Badmodernisierung und Service.</div>
-            </div>
-          </div>
-          <div class="smallNote">Beispielinhalt. Später echte Projekte.</div>
+  <section class="blocks" id="projektierung">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/sanitaer.jpg" alt="Planung"></div>
+        <div class="blockText">
+          <h2 class="blockH">Projektierung</h2>
+          <p class="blockP">Vor Ort Termin, Angebot, Umsetzung. Klarer Ablauf ohne Überraschungen.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section alt" id="leistungen">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Leistungen</h2>
-          <p>Kurz und strukturiert.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Wartung</div><div class="featureText">Regelmäßig, dokumentiert, zuverlässig.</div></div>
-          <div class="feature"><div class="featureTitle">Reparatur</div><div class="featureText">Ausfall, Leck, Druckverlust. Schnell beheben.</div></div>
-          <div class="feature"><div class="featureTitle">Badmodernisierung</div><div class="featureText">Teil oder komplett. Sauber geplant.</div></div>
-          <div class="feature"><div class="featureTitle">Heizung Modernisierung</div><div class="featureText">Effizienz, Zukunft, klare Beratung.</div></div>
+  <section class="blocks" id="ueber">
+    <div class="container">
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/sanitaer.jpg" alt="Team"></div>
+        <div class="blockText">
+          <h2 class="blockH">Über uns</h2>
+          <p class="blockP">Zuverlässig, erreichbar, sauber. Genau das erwarten Kunden und genau das liefern wir.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="pakete">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Pakete</h2>
-          <p>Damit Kunden sofort wissen woran sie sind.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Wartung Basic</div><div class="featureText">Sichtprüfung, Reinigung, Funktionscheck, Protokoll.</div></div>
-          <div class="feature"><div class="featureTitle">Wartung Plus</div><div class="featureText">Basic plus Messung und Optimierung.</div></div>
-          <div class="feature"><div class="featureTitle">Bad Refresh</div><div class="featureText">Teilmodernisierung für schnellen Effekt.</div></div>
-          <div class="feature"><div class="featureTitle">Komplettbad</div><div class="featureText">Planung und Umsetzung aus einer Hand.</div></div>
-        </div>
+  <section class="contactStrip" id="kontakt">
+    <div class="container contactGrid">
+      <div class="contactBox">
+        <h3>Kontakt</h3>
+        <p>Kurz schreiben, wir melden uns.</p>
       </div>
-    </section>
-
-    <section class="section alt" id="kontakt">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Kontakt</h2>
-          <p>Beispieldaten. Später echte Daten.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Telefon</div><div class="featureText">0123 456789</div></div>
-          <div class="feature"><div class="featureTitle">E Mail</div><div class="featureText">kontakt@beispiel.de</div></div>
-        </div>
+      <div class="contactBox">
+        <h3>Jetzt anfragen</h3>
+        <form class="smallForm" action="#" method="post">
+          <input class="input" type="text" placeholder="Name" required>
+          <input class="input" type="email" placeholder="E Mail" required>
+          <textarea class="input textarea" placeholder="Kurz dein Anliegen"></textarea>
+          <button class="ctaBtn" type="submit">Senden <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></button>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container footerInner">
-        <div>
-          <div class="footerBrand">Meisterseite</div>
-          <div class="footerSmall">Beispielseite Sanitär und Heizung</div>
-        </div>
-        <div class="footerLinks">
-          <a href="index.html">Start</a>
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
+  <footer class="footer">
+    <div class="container footerInner">
+      <div>
+        <div class="footerBrand">Meisterseite</div>
+        <div class="footerSmall">Beispielseite Sanitär & Heizung.</div>
       </div>
-    </footer>
+      <div class="footerLinks">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</main>
 
-    <a class="sticky" href="#kontakt" aria-label="Kontakt">Kontakt</a>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
