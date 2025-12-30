@@ -1,142 +1,124 @@
-<!-- elektriker.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elektriker – Beispielseite | Meisterseite</title>
-  <meta name="description" content="Beispielseite für Elektriker: Notfall, Leistungen, Ablauf und Kontakt." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Beispielseite für Elektriker: Leistungen, Projektierung, Über uns und Kontakt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=40" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbarInner">
-      <a class="brand" href="index.html" aria-label="Zur Startseite">
-        <span class="brandMark">M</span>
-        <span class="brandText">
-          <span class="brandName">Meisterseite</span>
-          <span class="brandTag">Beispielseite Elektriker</span>
-        </span>
-      </a>
 
-      <nav class="nav" aria-label="Navigation">
-        <a class="navLink" href="index.html#gewerke">Zurück</a>
-        <a class="navLink" href="#notfall">Notfall</a>
-        <a class="navLink" href="#leistungen">Leistungen</a>
-        <a class="navCta" href="#kontakt">Kontakt</a>
-      </nav>
+<header class="subTopbar">
+  <div class="container subTopbarInner">
+    <a class="subBrand" href="index.html" aria-label="Zur Startseite">
+      <img src="images/logo.jpg" alt="Meisterseite Logo">
+      <span class="subBrandText">
+        <span class="subBrandName">Meisterseite</span>
+        <span class="subBrandTag">Beispielseite Elektriker</span>
+      </span>
+    </a>
 
-      <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <nav class="subNav" aria-label="Navigation">
+      <a href="#home" class="isActive">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#projektierung">Projektierung</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="pageHead">
+    <div class="container">
+      <div class="pageKicker">Elektriker Beispielseite</div>
+      <h1 class="pageTitle">Unsere<br>Leistungen</h1>
     </div>
+  </section>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <div class="container mobileNavInner">
-        <a class="mobileNavLink" href="index.html#gewerke">Zurück</a>
-        <a class="mobileNavLink" href="#notfall">Notfall</a>
-        <a class="mobileNavLink" href="#leistungen">Leistungen</a>
-        <a class="mobileNavCta" href="#kontakt">Kontakt</a>
+  <section class="blocks" id="leistungen">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/elektriker.jpg" alt="Installation"></div>
+        <div class="blockText">
+          <h2 class="blockH">Installation</h2>
+          <p class="blockP">Neubau, Umbau, Erweiterung. Sauber dokumentiert, sauber umgesetzt.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/elektriker.jpg" alt="Fehlersuche"></div>
+        <div class="blockText">
+          <h2 class="blockH">Fehlersuche</h2>
+          <p class="blockP">Schnell eingrenzen, sauber beheben. Ohne Rumprobieren.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" style="padding-bottom:18px">
-      <div class="heroBg" aria-hidden="true"></div>
-      <div class="container heroGrid">
-        <div class="heroCopy">
-          <div class="pill">Elektriker</div>
-          <h1 class="heroH1">Schnelle Hilfe. Saubere Installation. Keine Ausreden.</h1>
-          <p class="heroSub">Notfall sichtbar, Leistungen klar, Kontakt sofort erreichbar.</p>
-          <div class="heroActions">
-            <a class="btn btnPrimary" href="#kontakt">Anfrage senden</a>
-            <a class="btn btnGhost" href="#notfall">Notfall Infos</a>
-          </div>
-          <div class="trustRow">
-            <div class="trustItem"><div class="trustNum">Sofort</div><div class="trustTxt">Rückruf und Einschätzung</div></div>
-            <div class="trustItem"><div class="trustNum">Sicher</div><div class="trustTxt">Normen und Prüfung</div></div>
-            <div class="trustItem"><div class="trustNum">Klar</div><div class="trustTxt">Transparente Leistung</div></div>
-          </div>
-        </div>
-
-        <div class="heroVisual">
-          <div class="previewCard">
-            <div class="previewTop">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-              <span class="previewTitle">Einsatzbild</span>
-            </div>
-            <div class="previewBody">
-              <img alt="Elektriker" style="width:100%;height:240px;object-fit:cover;border-radius:18px;border:1px solid rgba(15,17,21,.10)"
-                src="https://images.unsplash.com/photo-1581091870622-2c10b4f05b32?auto=format&fit=crop&w=1400&q=80">
-              <div style="margin-top:12px;color:#334155;font-size:14px">Beispiel: saubere Installation, klare Erklärung.</div>
-            </div>
-          </div>
-          <div class="smallNote">Beispielinhalt. Später echte Einsätze.</div>
+  <section class="blocks" id="projektierung">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/elektriker.jpg" alt="Planung"></div>
+        <div class="blockText">
+          <h2 class="blockH">Projektierung</h2>
+          <p class="blockP">Planung, Material, Umsetzung. Transparent und termintreu.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section alt" id="notfall">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Notfall</h2>
-          <p>Der Teil den Kunden sofort suchen.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Stromausfall</div><div class="featureText">Schnelle Fehleranalyse und sichere Lösung.</div></div>
-          <div class="feature"><div class="featureTitle">Sicherung fliegt</div><div class="featureText">Kurzschluss finden, Ursache beheben, prüfen.</div></div>
-          <div class="feature"><div class="featureTitle">Gefahr Situation</div><div class="featureText">Absichern, messen, dokumentieren.</div></div>
-          <div class="feature"><div class="featureTitle">Transparenz</div><div class="featureText">Einschätzung nach Sichtung. Keine Überraschungen.</div></div>
+  <section class="blocks" id="ueber">
+    <div class="container">
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/elektriker.jpg" alt="Team"></div>
+        <div class="blockText">
+          <h2 class="blockH">Über uns</h2>
+          <p class="blockP">Zuverlässig, sauber, erreichbar. Fokus auf Sicherheit und klare Kommunikation.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="leistungen">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Leistungen</h2>
-          <p>Privat und Gewerbe.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Installation</div><div class="featureText">Neubau, Umbau, Erweiterung. Sauber und normgerecht.</div></div>
-          <div class="feature"><div class="featureTitle">Fehleranalyse</div><div class="featureText">Störungen schnell finden und beheben.</div></div>
-          <div class="feature"><div class="featureTitle">Smart Home</div><div class="featureText">Sinnvoll integrieren. Einfach bedienbar.</div></div>
-          <div class="feature"><div class="featureTitle">Prüfung</div><div class="featureText">Messungen und Protokolle als Nachweis.</div></div>
-        </div>
+  <section class="contactStrip" id="kontakt">
+    <div class="container contactGrid">
+      <div class="contactBox">
+        <h3>Kontakt</h3>
+        <p>Kurz schreiben, wir melden uns.</p>
       </div>
-    </section>
-
-    <section class="section alt" id="kontakt">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Kontakt</h2>
-          <p>Beispieldaten. Später echte Daten.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Telefon</div><div class="featureText">0123 456789</div></div>
-          <div class="feature"><div class="featureTitle">E Mail</div><div class="featureText">kontakt@beispiel.de</div></div>
-        </div>
+      <div class="contactBox">
+        <h3>Jetzt anfragen</h3>
+        <form class="smallForm" action="#" method="post">
+          <input class="input" type="text" placeholder="Name" required>
+          <input class="input" type="email" placeholder="E Mail" required>
+          <textarea class="input textarea" placeholder="Kurz dein Anliegen"></textarea>
+          <button class="ctaBtn" type="submit">Senden <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></button>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container footerInner">
-        <div>
-          <div class="footerBrand">Meisterseite</div>
-          <div class="footerSmall">Beispielseite Elektriker</div>
-        </div>
-        <div class="footerLinks">
-          <a href="index.html">Start</a>
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
+  <footer class="footer">
+    <div class="container footerInner">
+      <div>
+        <div class="footerBrand">Meisterseite</div>
+        <div class="footerSmall">Beispielseite Elektriker.</div>
       </div>
-    </footer>
+      <div class="footerLinks">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</main>
 
-    <a class="sticky" href="#kontakt" aria-label="Kontakt">Kontakt</a>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
