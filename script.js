@@ -20,7 +20,7 @@ if (navToggle && mobileNav) {
   });
 }
 
-// Active Links (ohne Strich im Active, Strich nur Hover)
+// Active Links
 const desktopLinks = Array.from(document.querySelectorAll(".nav a.navLink[href^='#']"));
 const mobileLinks = Array.from(document.querySelectorAll(".mobileNav a[href^='#']"));
 const allNavLinks = [...desktopLinks, ...mobileLinks];
@@ -32,14 +32,22 @@ function setActiveByHash(hash) {
   document.querySelectorAll(selector).forEach((l) => l.classList.add("isActive"));
 }
 
+// Klick setzt aktiv
 allNavLinks.forEach((link) => {
-  link.addEventListener("click", () => setActiveByHash(link.getAttribute("href")));
+  link.addEventListener("click", () => {
+    const hash = link.getAttribute("href");
+    setActiveByHash(hash);
+  });
 });
 
+// Beim Laden: NICHT automatisch scrollen.
+// Wenn Hash vorhanden -> aktiv setzen. Sonst "Leistungen" aktiv markieren.
 window.addEventListener("load", () => {
-  setActiveByHash(location.hash || "#leistungen");
+  if (location.hash) setActiveByHash(location.hash);
+  else setActiveByHash("#leistungen");
 });
 
+// Scroll Observer
 const sectionIds = ["#leistungen", "#gewerke", "#kontakt"];
 const sections = sectionIds.map((id) => document.querySelector(id)).filter(Boolean);
 
