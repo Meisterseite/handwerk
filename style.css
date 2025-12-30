@@ -300,6 +300,38 @@ a{color:inherit;text-decoration:none}
 }
 .sticky:hover{transform: translateY(-2px)}
 
+/* Mail-Kreis rechts */
+.mailFab{
+  position:fixed;
+  right:18px;
+  top:50%;
+  transform: translateY(-50%);
+  width:56px;
+  height:56px;
+  border-radius:999px;
+  background:#0b1220;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+  z-index:80;
+  border:1px solid rgba(255,255,255,.10);
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+.mailFab:hover{
+  transform: translateY(-50%) scale(1.03);
+  box-shadow:0 22px 55px rgba(0,0,0,.26);
+}
+.mailFab:active{
+  transform: translateY(-50%) scale(.99);
+}
+.mailFabIcon{
+  width:24px;
+  height:24px;
+  fill: currentColor;
+}
+
 /* Responsive */
 @media (max-width: 1100px){
   .heroGrid{grid-template-columns:1fr;gap:18px}
@@ -320,4 +352,8 @@ a{color:inherit;text-decoration:none}
   .hero{padding:44px 0 18px}
   .heroH1{font-size:36px}
   .footerInner{flex-direction:column}
+  .mailFab{
+    width:52px;height:52px;
+    right:14px;
+  }
 }
