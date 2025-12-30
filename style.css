@@ -84,10 +84,19 @@ a{color:inherit;text-decoration:none}
   transform-origin:left;
   transition:transform .22s ease;
 }
+
+/* Hover: weiß + Strich */
 .navLink:hover{color:var(--barTextActive)}
 .navLink:hover::after{transform:scaleX(1)}
-.navCta{color:var(--barTextActive)}
-.navCta::after{transform:scaleX(1)}
+
+/* Aktiv: weiß, aber KEIN Strich */
+.navLink.isActive{color:var(--barTextActive)}
+.navLink.isActive::after{transform:scaleX(0)}
+
+/* CTA soll NICHT dauerhaft den Strich haben, nur wie normal hover/active */
+.navCta{color:var(--barText)}
+.navCta.isActive{color:var(--barTextActive)}
+
 
 /* Mobile */
 .navToggle{
