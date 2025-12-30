@@ -198,9 +198,53 @@ a{color:inherit;text-decoration:none}
 .sectionHead p{margin:0;color:var(--muted)}
 .alt{background:#fafbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
+/* ===== NEU: Text links + Bild rechts über den Kacheln ===== */
+.gewerkeIntro{
+  display:grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap:34px;
+  align-items:center;
+  margin: 24px 0 30px;
+}
+
+.gewerkeTitle{
+  margin:0 0 10px;
+  font-size:40px;
+  line-height:1.06;
+  letter-spacing:-.02em;
+}
+
+.gewerkeCopy{
+  margin:0 0 18px;
+  font-size:16px;
+  color:#2d3646;
+  max-width:60ch;
+}
+
+.gewerkeActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.gewerkeMedia{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow: var(--shadow2);
+  background:#fff;
+}
+
+.gewerkeMedia img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
 /* =========================================================
-   GEWERKE KACHELN (NEUES SYSTEM mit <img class="tradeImg">)
-   Hover: NICHT größer, sondern dunkel + Button
+   GEWERKE KACHELN
+   Hover: dunkler + Button
    ========================================================= */
 .tradeGrid{
   display:grid;
@@ -226,7 +270,6 @@ a{color:inherit;text-decoration:none}
   object-fit:cover;
   display:block;
 
-  /* kein Zoom */
   transform:none;
   filter:saturate(1.02) contrast(1.02);
   transition: filter .25s ease;
@@ -283,28 +326,16 @@ a{color:inherit;text-decoration:none}
   border:1px solid rgba(255,255,255,.35);
 }
 
-/* Hover: dunkler + Button sichtbar */
+/* Hover */
 .tradeCard:hover .tradeImg{
   filter:brightness(.55) saturate(1.02) contrast(1.02);
 }
-
 .tradeCard:hover .tradeShade{
   background:rgba(0,0,0,.35);
 }
-
 .tradeCard:hover .tradeBtn{
   opacity:1;
 }
-
-/* ---------------------------------------------------------
-   ALTES KACHEL SYSTEM (DEAKTIVIERT)
-   Falls du es noch irgendwo im HTML hast: entfernen.
-   ---------------------------------------------------------
-.tradeCardBg{ position:absolute; inset:0; overflow:hidden; }
-.tradeCardBg img{ width:100%; height:100%; object-fit:cover; }
-.tradeCardContent{ position:relative; padding:22px; z-index:2; }
-.tradeOverlay{ position:absolute; inset:0; z-index:3; }
----------------------------------------------------------- */
 
 /* Feature grid */
 .featureGrid{display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;margin-top:18px}
@@ -340,20 +371,29 @@ a{color:inherit;text-decoration:none}
 
 /* Responsive */
 @media (max-width: 1100px){
+  .gewerkeTitle{font-size:34px}
   .tradeGrid{grid-template-columns:repeat(2,1fr)}
   .tradeLabel{font-size:30px}
 }
+
 @media (max-width: 980px){
   .heroGrid{grid-template-columns:1fr;gap:18px}
   .heroH1{font-size:42px}
   .nav{display:none}
   .navToggle{display:flex}
   .featureGrid{grid-template-columns:1fr}
+
+  .gewerkeIntro{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
 }
+
 @media (max-width: 640px){
   .tradeGrid{grid-template-columns:1fr;gap:16px}
   .tradeLabel{font-size:28px;left:14px;bottom:14px}
 }
+
 @media (max-width: 560px){
   .hero{padding:44px 0 18px}
   .heroH1{font-size:36px}
