@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,14 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=20" />
 </head>
 
 <body>
 <header class="topbar">
   <div class="container topbarInner">
-    <a class="brand" href="index.html">
-      <span class="brandMark">M</span>
+    <a class="brand" href="index.html" aria-label="Meisterseite Start">
+      <img class="brandLogo" src="images/logo.jpg" alt="Meisterseite Logo">
       <span class="brandText">
         <span class="brandName">Meisterseite</span>
         <span class="brandTag">Websites für Handwerker</span>
@@ -26,11 +25,22 @@
     </a>
 
     <nav class="nav" aria-label="Hauptnavigation">
-      <a class="navLink" href="#gewerke">Gewerke</a>
       <a class="navLink" href="#leistungen">Leistungen</a>
-      <a class="navLink" href="#ablauf">Ablauf</a>
-      <a class="navCta navLink" href="#gewerke">Beispiele ansehen</a>
+      <a class="navLink" href="#gewerke">Gewerke</a>
+      <a class="navLink" href="#kontakt">Kontakt</a>
     </nav>
+
+    <div class="topRight">
+      <div class="phoneBlock">
+        <div class="phoneNum">06192 9392088</div>
+        <div class="phoneSub">Kostenfreie Beratung</div>
+      </div>
+      <a class="phoneBtn" href="tel:061929392088" aria-label="Anrufen">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+    </div>
 
     <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
@@ -39,60 +49,91 @@
 
   <div class="mobileNav" id="mobileNav" aria-hidden="true">
     <div class="mobileNavInner container">
-      <a class="mobileNavLink" href="#gewerke">Gewerke</a>
       <a class="mobileNavLink" href="#leistungen">Leistungen</a>
-      <a class="mobileNavLink" href="#ablauf">Ablauf</a>
-      <a class="mobileNavCta" href="#gewerke">Beispiele ansehen</a>
+      <a class="mobileNavLink" href="#gewerke">Gewerke</a>
+      <a class="mobileNavLink" href="#kontakt">Kontakt</a>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="hero" id="top">
-    <div class="heroBg" aria-hidden="true"></div>
-
-    <div class="container heroGrid">
-      <div class="heroLeft">
-        <div class="pill">Meisterseite • Websites für Handwerker</div>
-        <h1 class="heroH1">Gute Arbeit verdient eine gute Website.</h1>
-        <p class="heroSub">
-          Klare Struktur, schnelle Anfrage, Vertrauen auf den ersten Blick.
-          Du bekommst eine professionelle Seite, die zu deinem Gewerk passt.
-        </p>
-
-        <div class="heroActions">
-          <a class="btn btnPrimary" href="#gewerke">Beispiele ansehen</a>
-          <a class="btn btnGhost" href="#leistungen">Leistungen</a>
+  <!-- HERO -->
+  <section class="hero" id="top" aria-label="Startbereich">
+    <div class="container heroInner">
+      <div class="heroGrid">
+        <div class="heroLeft">
+          <div class="heroBadge">Gute Arbeit verdient eine gute Website</div>
+          <h1 class="heroH1">Websites für Handwerker, die Anfragen bringen.</h1>
+          <p class="heroSub">
+            Klarer Aufbau, Vertrauen auf den ersten Blick, schnelle Kontaktaufnahme.
+            Du bekommst eine professionelle Seite, die zu deinem Gewerk passt.
+          </p>
         </div>
 
-        <div class="trustRow">
-          <div class="trustItem">
-            <div class="trustNum">1 bis 3 Tage</div>
-            <div class="trustTxt">erste Demo Version</div>
-          </div>
-          <div class="trustItem">
-            <div class="trustNum">Klarer Aufbau</div>
-            <div class="trustTxt">ohne Schnickschnack</div>
-          </div>
-          <div class="trustItem">
-            <div class="trustNum">Direkt Kontakt</div>
-            <div class="trustTxt">Anruf, Mail, WhatsApp</div>
-          </div>
-        </div>
-      </div>
+        <!-- Formular wie Kronedach -->
+        <div class="formCard" id="kontakt">
+          <h3 class="formTitle">Kostenfreie Anfrage absenden</h3>
 
-      <div class="heroRight" aria-hidden="true">
-        <div class="heroMedia">
-          <img src="images/website.jpg" alt="" />
+          <form class="formGrid" action="#" method="post">
+            <input class="input" type="text" name="name" placeholder="Vor und Nachname" required>
+            <input class="input" type="email" name="email" placeholder="Bitte E Mail Adresse eingeben" required>
+            <input class="input" type="tel" name="tel" placeholder="Bitte Telefonnummer eingeben">
+            <textarea class="input textarea" name="msg" placeholder="Ihre Nachricht"></textarea>
+
+            <label class="checkRow">
+              <input type="checkbox" required>
+              <span>Ich stimme zu, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden.</span>
+            </label>
+
+            <button class="formBtn" type="submit">Anfrage absenden</button>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ROTES BAND -->
+  <section class="ribbon" aria-label="Vorteile">
+    <div class="container ribbonInner">
+      <div class="ribbonItem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+        Kostenfreie Beratung
+      </div>
+      <div class="ribbonItem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.1L18.5 21 12 16.9 5.5 21l2-7.9L2 9h7l3-7z"/></svg>
+        Schnelle Demo Version
+      </div>
+      <div class="ribbonItem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+        Klarer Aufbau ohne Schnickschnack
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO wie Screenshot -->
+  <section class="section" id="leistungen">
+    <div class="container">
+      <div class="introGrid">
+        <div>
+          <h2 class="introH2">Wir kümmern uns um deine Website. Alles aus einer Hand.</h2>
+          <p class="introP">
+            Struktur, Design, Texte, Kontakt, mobile Optimierung und die Live Schaltung.
+            Ziel ist nicht hübsch. Ziel ist Vertrauen und Anfragen.
+          </p>
+        </div>
+
+        <div class="introMedia" aria-hidden="true">
+          <img src="images/website.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEWERKE KACHELN genau hier -->
   <section class="section" id="gewerke">
     <div class="container">
       <div class="sectionHead">
-        <h2>Gewerke</h2>
+        <h2>Gewerke Beispiele</h2>
         <p>Klick öffnet die Beispielseite.</p>
       </div>
 
@@ -142,67 +183,6 @@
     </div>
   </section>
 
-  <section class="section alt" id="leistungen">
-    <div class="container">
-      <div class="sectionHead">
-        <h2>Leistungen</h2>
-        <p>Was du bekommst. Klar, schnell, ohne Umwege.</p>
-      </div>
-
-      <div class="featureGrid">
-        <div class="feature">
-          <div class="featureTitle">Design und Struktur</div>
-          <div class="featureText">Modern, ruhig, passend zum Betrieb. Fokus auf Vertrauen und Anfrage.</div>
-        </div>
-        <div class="feature">
-          <div class="featureTitle">Mobile Optimierung</div>
-          <div class="featureText">Schnell lesbar auf dem Handy. Buttons für Kontakt immer sichtbar.</div>
-        </div>
-        <div class="feature">
-          <div class="featureTitle">Kontakt Setup</div>
-          <div class="featureText">Anrufen, Mail, WhatsApp, Formular. Alles sauber verlinkt.</div>
-        </div>
-        <div class="feature">
-          <div class="featureTitle">Hosting und Launch</div>
-          <div class="featureText">Auf Wunsch: Domain, GitHub Pages oder eigenes Hosting. Live Schaltung inklusive.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="ablauf">
-    <div class="container">
-      <div class="sectionHead">
-        <h2>Ablauf</h2>
-        <p>So läuft es ab. Ohne Chaos.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step">
-          <div class="stepNum">1</div>
-          <div>
-            <div class="stepTitle">Kurz abstimmen</div>
-            <div class="stepText">Gewerk, Ziel, Stil. Dann starte ich mit der ersten Version.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="stepNum">2</div>
-          <div>
-            <div class="stepTitle">Demo ansehen</div>
-            <div class="stepText">Du bekommst eine klickbare Demo und sagst, was angepasst werden soll.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="stepNum">3</div>
-          <div>
-            <div class="stepTitle">Final und live</div>
-            <div class="stepText">Feinschliff, Texte, Bilder. Dann geht die Seite online.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
     <div class="container footerInner">
       <div>
@@ -218,14 +198,13 @@
 
   <a class="sticky" href="#gewerke">Beispiele</a>
 
-  <!-- Mail-Kreis rechts: HIER nur Mailadresse ersetzen -->
   <a class="mailFab" href="mailto:deinname@deinedomain.de?subject=Anfrage%20Website&body=Hi%20Meisterseite%2C%0A%0Aich%20h%C3%A4tte%20gern%20eine%20Website%20f%C3%BCr%20mein%20Gewerk%3A%20...%0A%0ADanke!" aria-label="E-Mail schreiben">
     <svg class="mailFabIcon" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
     </svg>
   </a>
 
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=20"></script>
 </main>
 </body>
 </html>
