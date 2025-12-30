@@ -106,7 +106,12 @@ a{color:inherit;text-decoration:none}
   filter: blur(10px);
   pointer-events:none;
 }
-.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.heroGrid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:42px;
+  align-items:center;
+}
 .pill{
   display:inline-flex;align-items:center;
   font-size:12px;padding:8px 12px;
@@ -141,34 +146,6 @@ a{color:inherit;text-decoration:none}
 .trustNum{font-weight:900;font-size:18px}
 .trustTxt{font-size:13px;color:var(--muted);margin-top:2px}
 
-.heroVisual{position:relative}
-.previewCard{
-  border-radius:var(--radius2);
-  background:linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.62));
-  border:1px solid rgba(15,17,21,.10);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-}
-.previewTop{
-  display:flex;align-items:center;gap:8px;
-  padding:14px 16px;
-  border-bottom:1px solid rgba(15,17,21,.08);
-}
-.dot{width:10px;height:10px;border-radius:999px;opacity:.9}
-.dot.r{background:#ff5f57}
-.dot.y{background:#febc2e}
-.dot.g{background:#28c840}
-.previewTitle{margin-left:8px;font-weight:900;color:#111827;font-size:13px;opacity:.9}
-.previewBody{padding:18px 16px 18px}
-.line{height:10px;border-radius:999px;background:rgba(17,24,39,.10);margin-bottom:10px}
-.w60{width:60%}
-.w70{width:70%}
-.w90{width:90%}
-.grid2{margin-top:14px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.tile{height:64px;border-radius:16px;background:rgba(17,24,39,.08)}
-.miniCta{margin-top:14px;padding:10px 12px;border-radius:14px;background:rgba(17,24,39,.10);font-weight:900;color:#111827;font-size:13px}
-.smallNote{margin-top:10px;color:var(--muted);font-size:13px}
-
 /* Sections */
 .section{padding:68px 0}
 .sectionHead{margin-bottom:22px}
@@ -200,7 +177,6 @@ a{color:inherit;text-decoration:none}
   min-height:190px;
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
 }
-
 .tradeCard:hover{
   transform: translateY(-2px);
   box-shadow:0 14px 34px rgba(0,0,0,.10);
@@ -212,7 +188,6 @@ a{color:inherit;text-decoration:none}
   inset:0;
   overflow:hidden;
 }
-
 .tradeCardBg img{
   width:100%;
   height:100%;
@@ -222,7 +197,6 @@ a{color:inherit;text-decoration:none}
   filter:saturate(1.05) contrast(1.02);
   transform:scale(1.02);
 }
-
 .tradeCard::after{
   content:"";
   position:absolute; inset:0;
