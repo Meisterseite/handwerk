@@ -183,3 +183,7 @@ a{color:inherit;text-decoration:none}
   .nav{display:none}
   .navToggle{display:flex}
 }
+/* Telefonnummer und Telefon-Button entfernen */
+.topRight{
+  display:none !important;
+}
