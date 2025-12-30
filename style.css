@@ -193,36 +193,49 @@ a{color:inherit;text-decoration:none}
 .sectionHead p{margin:0;color:var(--muted)}
 .alt{background:#fafbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-/* KACHELN wie Screenshot */
+/* =========================================================
+   GEWERKE KACHELN (NEUES SYSTEM mit <img class="tradeImg">)
+   Wichtig: Das ist die Stelle, die vorher gefehlt hat.
+   ========================================================= */
 .tradeGrid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:22px;
   margin-top:18px;
 }
+
 .tradeCard{
   position:relative;
   display:block;
-  border-radius:0;
   overflow:hidden;
   background:#000;
-  aspect-ratio: 16 / 9;
+  aspect-ratio:16 / 9;
+  border-radius:0;
 }
+
 .tradeImg{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
   transform:scale(1.02);
-  transition: transform .35s ease, filter .35s ease;
+  transition:transform .35s ease, filter .35s ease;
   filter:saturate(1.02) contrast(1.02);
 }
+
 .tradeShade{
   position:absolute;
   inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,0) 70%);
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.15) 45%,
+    rgba(0,0,0,0) 70%
+  );
 }
+
 .tradeLabel{
   position:absolute;
   left:18px;
@@ -234,10 +247,21 @@ a{color:inherit;text-decoration:none}
   text-shadow:0 8px 24px rgba(0,0,0,.45);
   line-height:1.05;
 }
+
 .tradeCard:hover .tradeImg{
   transform:scale(1.07);
   filter:saturate(1.05) contrast(1.04);
 }
+
+/* ---------------------------------------------------------
+   ALTES KACHEL SYSTEM (DEAKTIVIERT)
+   Falls du es noch irgendwo im HTML hast: entfernen.
+   ---------------------------------------------------------
+.tradeCardBg{ position:absolute; inset:0; overflow:hidden; }
+.tradeCardBg img{ width:100%; height:100%; object-fit:cover; }
+.tradeCardContent{ position:relative; padding:22px; z-index:2; }
+.tradeOverlay{ position:absolute; inset:0; z-index:3; }
+---------------------------------------------------------- */
 
 /* Feature grid */
 .featureGrid{display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;margin-top:18px}
