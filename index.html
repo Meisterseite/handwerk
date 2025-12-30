@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meisterseite – Websites für Handwerker</title>
   <meta name="description" content="Moderne Websites für Handwerker. Beispiele pro Gewerk als Unterseiten." />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
       <a class="navCta" href="#gewerke">Beispiele ansehen</a>
     </nav>
 
-    <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">
+    <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -82,89 +82,108 @@
   <div class="container">
     <div class="sectionHead">
       <h2>Gewerke</h2>
-      <p>Hover zeigt den Button. Klick öffnet die Beispielseite.</p>
+      <p>Klick öffnet die Beispielseite.</p>
     </div>
 
     <div class="tradeGrid">
 
-      <!-- 1. Malerbetrieb -->
       <a class="tradeCard" href="maler.html">
-        <div class="tradeCardBg">
-          <img src="images/maler.jpg" alt="Malerbetrieb">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Malerbetrieb</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+        <img class="tradeImg" src="images/maler.jpg" alt="Malerbetrieb">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Malerbetrieb</div>
       </a>
 
-      <!-- 2. Schreiner -->
-      <a class="tradeCard" href="Schreiner.html">
-        <div class="tradeCardBg">
-          <img src="images/Schreiner.jpg" alt="Schreiner">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Schreiner</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+      <a class="tradeCard" href="schreiner.html">
+        <img class="tradeImg" src="images/schreiner.jpg" alt="Schreiner">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Schreiner</div>
       </a>
 
-      <!-- 3. Sanitär & Heizung -->
       <a class="tradeCard" href="sanitaer.html">
-        <div class="tradeCardBg">
-          <img src="images/sanitaer.jpg" alt="Sanitär und Heizung">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Sanitär &amp; Heizung</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+        <img class="tradeImg" src="images/sanitaer.jpg" alt="Sanitär und Heizung">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Sanitär &amp; Heizung</div>
       </a>
 
-      <!-- 4. Dachdecker -->
       <a class="tradeCard" href="dach.html">
-        <div class="tradeCardBg">
-          <img src="images/dach.jpg" alt="Dachdecker">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Dachdecker</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+        <img class="tradeImg" src="images/dach.jpg" alt="Dachdecker">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Dachdecker</div>
       </a>
 
-      <!-- 5. Elektriker -->
       <a class="tradeCard" href="elektriker.html">
-        <div class="tradeCardBg">
-          <img src="images/elektriker.jpg" alt="Elektriker">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Elektriker</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+        <img class="tradeImg" src="images/elektriker.jpg" alt="Elektriker">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Elektriker</div>
       </a>
 
-      <!-- 6. Fliesenleger -->
-      <a class="tradeCard" href="fliesen.html">
-        <div class="tradeCardBg">
-          <img src="images/fliesen.jpg" alt="Fliesenleger">
-        </div>
-        <div class="tradeCardContent">
-          <div class="tradeCardTitle">Fliesenleger</div>
-        </div>
-        <div class="tradeOverlay">
-          <div class="tradeOverlayBtn">Beispielseite öffnen</div>
-        </div>
+      <a class="tradeCard" href="garten.html">
+        <img class="tradeImg" src="images/garten.jpg" alt="Garten und Landschaft">
+        <div class="tradeShade" aria-hidden="true"></div>
+        <div class="tradeLabel">Garten &amp; Landschaft</div>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="leistungen">
+  <div class="container">
+    <div class="sectionHead">
+      <h2>Leistungen</h2>
+      <p>Was du bekommst. Klar, schnell, ohne Umwege.</p>
+    </div>
+
+    <div class="featureGrid">
+      <div class="feature">
+        <div class="featureTitle">Design und Struktur</div>
+        <div class="featureText">Modern, ruhig, passend zum Betrieb. Fokus auf Vertrauen und Anfrage.</div>
+      </div>
+      <div class="feature">
+        <div class="featureTitle">Mobile Optimierung</div>
+        <div class="featureText">Schnell lesbar auf dem Handy. Buttons für Kontakt immer sichtbar.</div>
+      </div>
+      <div class="feature">
+        <div class="featureTitle">Kontakt Setup</div>
+        <div class="featureText">Anrufen, Mail, WhatsApp, Formular. Alles sauber verlinkt.</div>
+      </div>
+      <div class="feature">
+        <div class="featureTitle">Hosting und Launch</div>
+        <div class="featureText">Auf Wunsch: Domain, GitHub Pages oder eigenes Hosting. Live Schaltung inklusive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ablauf">
+  <div class="container">
+    <div class="sectionHead">
+      <h2>Ablauf</h2>
+      <p>So läuft es ab. Ohne Chaos.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="stepNum">1</div>
+        <div>
+          <div class="stepTitle">Kurz abstimmen</div>
+          <div class="stepText">Gewerk, Ziel, Stil. Dann starte ich mit der ersten Version.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="stepNum">2</div>
+        <div>
+          <div class="stepTitle">Demo ansehen</div>
+          <div class="stepText">Du bekommst eine klickbare Demo und sagst, was angepasst werden soll.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="stepNum">3</div>
+        <div>
+          <div class="stepTitle">Final und live</div>
+          <div class="stepText">Feinschliff, Texte, Bilder. Dann geht die Seite online.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -184,7 +203,7 @@
 
 <a class="sticky" href="#gewerke">Beispiele</a>
 
-<script src="script.js?v=6"></script>
+<script src="script.js?v=10"></script>
 </main>
 </body>
 </html>
