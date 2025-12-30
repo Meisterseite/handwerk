@@ -1,3 +1,4 @@
+/* style.css */
 :root{
   --text:#0f1115;
   --muted:#5a6270;
@@ -28,9 +29,7 @@ a{color:inherit;text-decoration:none}
 
 /* TOPBAR */
 .topbar{
-  position:sticky;
-  top:0;
-  z-index:50;
+  position:sticky;top:0;z-index:50;
   background:var(--bar);
   border-bottom:1px solid rgba(255,255,255,.10);
 }
@@ -85,13 +84,19 @@ a{color:inherit;text-decoration:none}
   transform-origin:left;
   transition:transform .22s ease;
 }
+
+/* Hover: weiß + Strich */
 .navLink:hover{color:var(--barTextActive)}
 .navLink:hover::after{transform:scaleX(1)}
+
+/* Aktiv: weiß, aber KEIN Strich */
 .navLink.isActive{color:var(--barTextActive)}
 .navLink.isActive::after{transform:scaleX(0)}
 
+/* CTA soll NICHT dauerhaft den Strich haben, nur wie normal hover/active */
 .navCta{color:var(--barText)}
 .navCta.isActive{color:var(--barTextActive)}
+
 
 /* Mobile */
 .navToggle{
@@ -114,46 +119,43 @@ a{color:inherit;text-decoration:none}
 }
 .mobileNavInner{padding:14px 24px 18px;display:grid;gap:10px}
 .mobileNavLink{
-  padding:12px;
-  border-radius:12px;
+  padding:12px 12px;border-radius:12px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(255,255,255,.08);
   color:#fff;
   font-weight:800;
 }
 .mobileNavCta{
-  padding:12px;
-  border-radius:12px;
+  padding:12px 12px;border-radius:12px;
   background:rgba(255,255,255,.18);
   color:#fff;
   text-align:center;
   font-weight:900;
 }
 
-/* HERO */
+/* Hero */
 .hero{
   position:relative;
   padding:56px 0 26px;
   overflow:hidden;
-  isolation:isolate;
 }
 
-/* Hintergrundbild */
+/* NEU: Hintergrundbild hinter allem, dezent */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),
-    url("images/hintergrund.jpg") center / cover no-repeat;
-  opacity:.2;
-  z-index:-1;
+  background:url("images/hintergrund.jpg") center / cover no-repeat;
+  opacity:.20;
+  z-index:0;
+  pointer-events:none;
 }
 
-/* Farb-Glow ganz hinten */
+/* damit Text, Buttons, Bild etc sicher über dem Hintergrund liegen */
+.hero .container{position:relative; z-index:2;}
+
 .heroBg{
-  position:absolute;
-  inset:-200px -200px auto -200px;
+  position:absolute;inset:-200px -200px auto -200px;
   height:520px;
   background:
     radial-gradient(closest-side, rgba(14,165,233,.20), transparent 65%),
@@ -161,95 +163,79 @@ a{color:inherit;text-decoration:none}
     radial-gradient(closest-side, rgba(16,185,129,.10), transparent 72%);
   filter: blur(10px);
   pointer-events:none;
-  z-index:-2;
+  z-index:1; /* bleibt hinter dem Content, aber über dem Bild möglich */
 }
 
 .heroGrid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns: 1.05fr .95fr;
   gap:38px;
   align-items:center;
 }
-
 .pill{
-  display:inline-flex;
-  font-size:12px;
-  padding:8px 12px;
+  display:inline-flex;align-items:center;
+  font-size:12px;padding:8px 12px;
   border:1px solid var(--line);
   border-radius:999px;
-  background:rgba(255,255,255,.85);
+  background:rgba(255,255,255,.8);
   margin-bottom:16px;
 }
-
-.heroH1{
-  font-size:54px;
-  line-height:1.04;
-  letter-spacing:-.02em;
-  margin:0 0 14px;
-}
-
-.heroSub{
-  margin:0 0 22px;
-  font-size:18px;
-  color:#2d3646;
-  max-width:52ch;
-}
-
+.heroH1{font-size:54px;line-height:1.04;letter-spacing:-.02em;margin:0 0 14px}
+.heroSub{margin:0 0 22px;font-size:18px;color:#2d3646;max-width:52ch}
 .heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 16px;
-  border-radius:14px;
-  font-weight:800;
-  border:1px solid var(--line);
-  transition:.18s ease;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:14px;
+  font-weight:800;border:1px solid var(--line);
+  transition: transform .18s ease, box-shadow .18s ease;
+  user-select:none;
 }
-.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow2)}
+.btn:hover{transform: translateY(-1px); box-shadow: var(--shadow2)}
 .btnPrimary{border:none;color:#fff;background:linear-gradient(135deg,#111827,#0b1220)}
 .btnGhost{background:#fff}
 
 .trustRow{display:flex;gap:16px;flex-wrap:wrap}
 .trustItem{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.9);
+  background:rgba(255,255,255,.85);
   border-radius:16px;
   padding:12px 14px;
   min-width:160px;
 }
 .trustNum{font-weight:900;font-size:18px}
-.trustTxt{font-size:13px;color:var(--muted)}
+.trustTxt{font-size:13px;color:var(--muted);margin-top:2px}
 
 .heroMedia{
-  aspect-ratio:16/9;
+  border-radius:0;
+  overflow:hidden;
   background:#000;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
 }
-.heroMedia img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.heroMedia img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Sections */
 .section{padding:56px 0}
-.sectionHead h2{margin:0 0 6px;font-size:30px}
+.sectionHead{margin-bottom:18px}
+.sectionHead h2{margin:0 0 6px;font-size:30px;letter-spacing:-.01em}
 .sectionHead p{margin:0;color:var(--muted)}
 .alt{background:#fafbff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
 /* Gewerke */
 .tradeGrid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap:22px;
   margin-top:18px;
 }
 .tradeCard{
   position:relative;
+  display:block;
   overflow:hidden;
-  aspect-ratio:16/9;
   background:#000;
+  aspect-ratio:16 / 9;
+  border-radius:0;
 }
 .tradeImg{
   position:absolute;
@@ -257,11 +243,20 @@ a{color:inherit;text-decoration:none}
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
+  transition: filter .22s ease;
+  filter:saturate(1.02) contrast(1.02);
 }
 .tradeShade{
   position:absolute;
   inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.18) 45%,
+    rgba(0,0,0,0) 70%
+  );
+  transition: background .22s ease;
 }
 .tradeLabel{
   position:absolute;
@@ -270,6 +265,10 @@ a{color:inherit;text-decoration:none}
   color:#fff;
   font-size:34px;
   font-weight:500;
+  letter-spacing:.01em;
+  text-shadow:0 8px 24px rgba(0,0,0,.45);
+  line-height:1.05;
+  z-index:2;
 }
 .tradeHover{
   position:absolute;
@@ -278,51 +277,113 @@ a{color:inherit;text-decoration:none}
   align-items:center;
   justify-content:center;
   opacity:0;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
+  z-index:3;
+  pointer-events:none;
 }
 .tradeHoverBtn{
-  background:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:12px 14px;
+  border-radius:0;
+  background:rgba(255,255,255,.92);
+  color:#111827;
   font-weight:800;
+  font-size:14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
 }
-.tradeCard:hover .tradeHover{opacity:1}
+.tradeCard:hover .tradeImg{filter:brightness(.70) saturate(1.02) contrast(1.03)}
+.tradeCard:hover .tradeShade{background:rgba(0,0,0,.35)}
+.tradeCard:hover .tradeHover{opacity:1; transform: translateY(0)}
+
+/* Features */
+.featureGrid{display:grid;grid-template-columns:repeat(2, 1fr);gap:14px;margin-top:18px}
+.feature{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:16px}
+.featureTitle{font-weight:900;margin-bottom:6px}
+.featureText{color:#334155}
+
+/* Steps */
+.steps{display:grid;gap:12px;margin-top:18px}
+.step{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:16px}
+.stepNum{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:rgba(14,165,233,.12);color:#075985;font-weight:900}
+.stepTitle{font-weight:900;margin-bottom:4px}
+.stepText{color:#334155}
 
 /* Footer */
 .footer{border-top:1px solid var(--line);padding:26px 0}
-.footerInner{display:flex;justify-content:space-between;gap:18px}
+.footerInner{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.footerBrand{font-weight:900}
+.footerSmall{color:var(--muted);font-size:13px;margin-top:6px}
+.footerLinks{display:flex;gap:14px}
+.footerLinks a{color:#1b2230;opacity:.85}
+.footerLinks a:hover{opacity:1}
 
-/* Sticky */
 .sticky{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#111827;
-  color:#fff;
-  padding:12px 14px;
-  font-weight:900;
+  position:fixed;right:18px;bottom:18px;z-index:60;
+  padding:12px 14px;border-radius:16px;
+  background:linear-gradient(135deg,#111827,#0b1220);
+  color:#fff;font-weight:900;
+  box-shadow:0 14px 34px rgba(17,24,39,.26);
+  transition: transform .18s ease, opacity .18s ease;
 }
+.sticky:hover{transform: translateY(-2px)}
 
-/* Mail Button */
+/* Mail-Kreis rechts */
 .mailFab{
   position:fixed;
   right:18px;
   top:50%;
-  transform:translateY(-50%);
+  transform: translateY(-50%);
   width:56px;
   height:56px;
+  border-radius:999px;
   background:#0b1220;
   color:#fff;
-  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+  z-index:80;
+  border:1px solid rgba(255,255,255,.10);
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
 }
-.mailFabIcon{width:24px;height:24px;fill:currentColor}
+.mailFab:hover{
+  transform: translateY(-50%) scale(1.03);
+  box-shadow:0 22px 55px rgba(0,0,0,.26);
+}
+.mailFab:active{
+  transform: translateY(-50%) scale(.99);
+}
+.mailFabIcon{
+  width:24px;
+  height:24px;
+  fill: currentColor;
+}
 
 /* Responsive */
-@media(max-width:1100px){
-  .heroGrid{grid-template-columns:1fr}
+@media (max-width: 1100px){
+  .heroGrid{grid-template-columns:1fr;gap:18px}
   .tradeGrid{grid-template-columns:repeat(2,1fr)}
+  .tradeLabel{font-size:30px}
 }
-@media(max-width:640px){
-  .tradeGrid{grid-template-columns:1fr}
+@media (max-width: 980px){
+  .heroH1{font-size:42px}
+  .nav{display:none}
+  .navToggle{display:flex}
+  .featureGrid{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .tradeGrid{grid-template-columns:1fr;gap:16px}
+  .tradeLabel{font-size:28px;left:14px;bottom:14px}
+}
+@media (max-width: 560px){
+  .hero{padding:44px 0 18px}
+  .heroH1{font-size:36px}
+  .footerInner{flex-direction:column}
+  .mailFab{
+    width:52px;height:52px;
+    right:14px;
+  }
 }
