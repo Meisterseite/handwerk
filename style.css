@@ -2,6 +2,7 @@
   box-sizing:border-box;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
+
 :root{
   --text:#0f1115;
   --muted:#5a6270;
@@ -23,7 +24,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   color:var(--text);
   background:#fff;
   line-height:1.55;
@@ -199,7 +200,7 @@ a{color:inherit;text-decoration:none}
 
 /* =========================================================
    GEWERKE KACHELN (NEUES SYSTEM mit <img class="tradeImg">)
-   Wichtig: Das ist die Stelle, die vorher gefehlt hat.
+   Hover: NICHT größer, sondern dunkel + Button
    ========================================================= */
 .tradeGrid{
   display:grid;
@@ -224,9 +225,11 @@ a{color:inherit;text-decoration:none}
   height:100%;
   object-fit:cover;
   display:block;
-  transform:scale(1.02);
-  transition:transform .35s ease, filter .35s ease;
+
+  /* kein Zoom */
+  transform:none;
   filter:saturate(1.02) contrast(1.02);
+  transition: filter .25s ease;
 }
 
 .tradeShade{
@@ -234,10 +237,11 @@ a{color:inherit;text-decoration:none}
   inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,.55) 0%,
-    rgba(0,0,0,.15) 45%,
+    rgba(0,0,0,.40) 0%,
+    rgba(0,0,0,.12) 45%,
     rgba(0,0,0,0) 70%
   );
+  transition: background .25s ease;
 }
 
 .tradeLabel{
@@ -250,11 +254,46 @@ a{color:inherit;text-decoration:none}
   letter-spacing:.01em;
   text-shadow:0 8px 24px rgba(0,0,0,.45);
   line-height:1.05;
+  z-index:2;
 }
 
+/* Button Overlay */
+.tradeBtn{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition: opacity .25s ease;
+  z-index:3;
+  pointer-events:none;
+}
+
+.tradeBtn span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  background:rgba(0,0,0,.78);
+  color:#fff;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.35);
+}
+
+/* Hover: dunkler + Button sichtbar */
 .tradeCard:hover .tradeImg{
-  transform:scale(1.07);
-  filter:saturate(1.05) contrast(1.04);
+  filter:brightness(.55) saturate(1.02) contrast(1.02);
+}
+
+.tradeCard:hover .tradeShade{
+  background:rgba(0,0,0,.35);
+}
+
+.tradeCard:hover .tradeBtn{
+  opacity:1;
 }
 
 /* ---------------------------------------------------------
