@@ -1,2 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schreinerei – Beispielseite | Meisterseite</title>
+  <meta name="description" content="Beispielseite für Schreinerei: Leistungen, Projektierung, Über uns und Kontakt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=40" />
+</head>
+<body>
+
+<header class="subTopbar">
+  <div class="container subTopbarInner">
+    <a class="subBrand" href="index.html" aria-label="Zur Startseite">
+      <img src="images/logo.jpg" alt="Meisterseite Logo">
+      <span class="subBrandText">
+        <span class="subBrandName">Meisterseite</span>
+        <span class="subBrandTag">Beispielseite Schreinerei</span>
+      </span>
+    </a>
+
+    <nav class="subNav" aria-label="Navigation">
+      <a href="#home" class="isActive">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#projektierung">Projektierung</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="pageHead">
+    <div class="container">
+      <div class="pageKicker">Schreinerei Beispielseite</div>
+      <h1 class="pageTitle">Unsere<br>Leistungen</h1>
+    </div>
+  </section>
+
+  <section class="blocks" id="leistungen">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/schreiner.jpg" alt="Möbelbau"></div>
+        <div class="blockText">
+          <h2 class="blockH">Möbelbau</h2>
+          <p class="blockP">Maßarbeit, sauber verarbeitet. Passgenau für Raum, Stil und Nutzung.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/schreiner.jpg" alt="Innenausbau"></div>
+        <div class="blockText">
+          <h2 class="blockH">Innenausbau</h2>
+          <p class="blockP">Türen, Böden, Einbauten. Solide umgesetzt, ohne Pfusch und ohne Stress.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blocks" id="projektierung">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/schreiner.jpg" alt="Planung"></div>
+        <div class="blockText">
+          <h2 class="blockH">Projektierung</h2>
+          <p class="blockP">Aufmaß, Planung, Material, Umsetzung. Du bekommst klare Schritte und ein Ergebnis.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blocks" id="ueber">
+    <div class="container">
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/schreiner.jpg" alt="Team"></div>
+        <div class="blockText">
+          <h2 class="blockH">Über uns</h2>
+          <p class="blockP">Meisterbetrieb mit Anspruch. Saubere Arbeit, verbindliche Termine, klare Kommunikation.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contactStrip" id="kontakt">
+    <div class="container contactGrid">
+      <div class="contactBox">
+        <h3>Kontakt</h3>
+        <p>Kurz schreiben, wir melden uns.</p>
+      </div>
+      <div class="contactBox">
+        <h3>Jetzt anfragen</h3>
+        <form class="smallForm" action="#" method="post">
+          <input class="input" type="text" placeholder="Name" required>
+          <input class="input" type="email" placeholder="E Mail" required>
+          <textarea class="input textarea" placeholder="Kurz dein Anliegen"></textarea>
+          <button class="ctaBtn" type="submit">Senden <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footerInner">
+      <div>
+        <div class="footerBrand">Meisterseite</div>
+        <div class="footerSmall">Beispielseite Schreinerei.</div>
+      </div>
+      <div class="footerLinks">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
+
 
 
