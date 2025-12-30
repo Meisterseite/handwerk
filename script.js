@@ -17,4 +17,3 @@ if (navToggle && mobileNav) {
     mobileNav.setAttribute("aria-hidden", "true");
   });
 }
-
