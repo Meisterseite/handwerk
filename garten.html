@@ -1,141 +1,124 @@
-<!-- garten.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Garten und Landschaft – Beispielseite | Meisterseite</title>
-  <meta name="description" content="Beispielseite für Garten und Landschaft: Projekte, Leistungen, Kontakt." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Garten & Landschaft – Beispielseite | Meisterseite</title>
+  <meta name="description" content="Beispielseite für Garten & Landschaft: Leistungen, Projektierung, Über uns und Kontakt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=40" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbarInner">
-      <a class="brand" href="index.html" aria-label="Zur Startseite">
-        <span class="brandMark">M</span>
-        <span class="brandText">
-          <span class="brandName">Meisterseite</span>
-          <span class="brandTag">Beispielseite Garten und Landschaft</span>
-        </span>
-      </a>
 
-      <nav class="nav" aria-label="Navigation">
-        <a class="navLink" href="index.html#gewerke">Zurück</a>
-        <a class="navLink" href="#projekte">Projekte</a>
-        <a class="navLink" href="#leistungen">Leistungen</a>
-        <a class="navCta" href="#kontakt">Kontakt</a>
-      </nav>
+<header class="subTopbar">
+  <div class="container subTopbarInner">
+    <a class="subBrand" href="index.html" aria-label="Zur Startseite">
+      <img src="images/logo.jpg" alt="Meisterseite Logo">
+      <span class="subBrandText">
+        <span class="subBrandName">Meisterseite</span>
+        <span class="subBrandTag">Beispielseite Garten & Landschaft</span>
+      </span>
+    </a>
 
-      <button class="navToggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <nav class="subNav" aria-label="Navigation">
+      <a href="#home" class="isActive">Home</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#projektierung">Projektierung</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="pageHead">
+    <div class="container">
+      <div class="pageKicker">Garten & Landschaft Beispielseite</div>
+      <h1 class="pageTitle">Unsere<br>Leistungen</h1>
     </div>
+  </section>
 
-    <div class="mobileNav" id="mobileNav" aria-hidden="true">
-      <div class="container mobileNavInner">
-        <a class="mobileNavLink" href="index.html#gewerke">Zurück</a>
-        <a class="mobileNavLink" href="#projekte">Projekte</a>
-        <a class="mobileNavLink" href="#leistungen">Leistungen</a>
-        <a class="mobileNavCta" href="#kontakt">Kontakt</a>
+  <section class="blocks" id="leistungen">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/garten.jpg" alt="Gartenpflege"></div>
+        <div class="blockText">
+          <h2 class="blockH">Gartenpflege</h2>
+          <p class="blockP">Schnitt, Pflege, Saisonarbeit. Sauber, zuverlässig, ohne Chaos.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/garten.jpg" alt="Landschaftsbau"></div>
+        <div class="blockText">
+          <h2 class="blockH">Landschaftsbau</h2>
+          <p class="blockP">Wege, Beete, Zaun, Terrasse. Stabil gebaut, sauber abgenommen.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" style="padding-bottom:18px">
-      <div class="heroBg" aria-hidden="true"></div>
-      <div class="container heroGrid">
-        <div class="heroCopy">
-          <div class="pill">Garten und Landschaft</div>
-          <h1 class="heroH1">Gärten die bleiben. Projekte die man sehen will.</h1>
-          <p class="heroSub">Galerie im Fokus. Leistungen klar. Kontakt schnell.</p>
-          <div class="heroActions">
-            <a class="btn btnPrimary" href="#kontakt">Projekt anfragen</a>
-            <a class="btn btnGhost" href="#projekte">Projekte ansehen</a>
-          </div>
-          <div class="trustRow">
-            <div class="trustItem"><div class="trustNum">Visuell</div><div class="trustTxt">Bilder überzeugen</div></div>
-            <div class="trustItem"><div class="trustNum">Klar</div><div class="trustTxt">Leistungen strukturiert</div></div>
-            <div class="trustItem"><div class="trustNum">Saisonal</div><div class="trustTxt">Angebote nach Bedarf</div></div>
-          </div>
-        </div>
-
-        <div class="heroVisual">
-          <div class="previewCard">
-            <div class="previewTop">
-              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-              <span class="previewTitle">Projektbild</span>
-            </div>
-            <div class="previewBody">
-              <img alt="Garten und Landschaft" style="width:100%;height:240px;object-fit:cover;border-radius:18px;border:1px solid rgba(15,17,21,.10)"
-                src="https://images.unsplash.com/photo-1523413455145-9c2f7b2b2b69?auto=format&fit=crop&w=1400&q=80">
-              <div style="margin-top:12px;color:#334155;font-size:14px">Beispiel: Wege, Terrasse, Pflege.</div>
-            </div>
-          </div>
-          <div class="smallNote">Beispielinhalt. Später echte Projekte.</div>
+  <section class="blocks" id="projektierung">
+    <div class="container">
+      <div class="block">
+        <div class="blockMedia"><img src="images/garten.jpg" alt="Planung"></div>
+        <div class="blockText">
+          <h2 class="blockH">Projektierung</h2>
+          <p class="blockP">Planung, Material, Ablauf. Transparent und termintreu.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="projekte">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Projekte</h2>
-          <p>Kurze Beispiele, schnell überzeugend.</p>
-        </div>
-        <div class="tradeGrid" style="grid-template-columns:repeat(3,1fr)">
-          <div class="feature"><div class="featureTitle">Terrasse und Wege</div><div class="featureText">Pflaster, Platten, saubere Kanten.</div></div>
-          <div class="feature"><div class="featureTitle">Rasen und Pflege</div><div class="featureText">Neuanlage, Schnitt, Saisonpflege.</div></div>
-          <div class="feature"><div class="featureTitle">Beete und Gestaltung</div><div class="featureText">Struktur, Form, Pflanzung.</div></div>
+  <section class="blocks" id="ueber">
+    <div class="container">
+      <div class="block reverse">
+        <div class="blockMedia"><img src="images/garten.jpg" alt="Team"></div>
+        <div class="blockText">
+          <h2 class="blockH">Über uns</h2>
+          <p class="blockP">Klarer Ablauf, saubere Arbeit, gute Kommunikation. Genau so entsteht Vertrauen.</p>
+          <a class="ctaBtn" href="#kontakt">Jetzt anfragen <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section alt" id="leistungen">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Leistungen</h2>
-          <p>Einfach erklärt.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Pflaster</div><div class="featureText">Hof, Wege, Zufahrt. Stabil und sauber.</div></div>
-          <div class="feature"><div class="featureTitle">Terrassen</div><div class="featureText">Holz oder Stein. Optik und Haltbarkeit.</div></div>
-          <div class="feature"><div class="featureTitle">Rasen</div><div class="featureText">Neuanlage, Rollrasen, Pflege.</div></div>
-          <div class="feature"><div class="featureTitle">Sichtschutz</div><div class="featureText">Zaun und Montage sauber umgesetzt.</div></div>
-        </div>
+  <section class="contactStrip" id="kontakt">
+    <div class="container contactGrid">
+      <div class="contactBox">
+        <h3>Kontakt</h3>
+        <p>Kurz schreiben, wir melden uns.</p>
       </div>
-    </section>
-
-    <section class="section alt" id="kontakt">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Kontakt</h2>
-          <p>Beispieldaten. Später echte Daten.</p>
-        </div>
-        <div class="featureGrid">
-          <div class="feature"><div class="featureTitle">Telefon</div><div class="featureText">0123 456789</div></div>
-          <div class="feature"><div class="featureTitle">E Mail</div><div class="featureText">kontakt@beispiel.de</div></div>
-        </div>
+      <div class="contactBox">
+        <h3>Jetzt anfragen</h3>
+        <form class="smallForm" action="#" method="post">
+          <input class="input" type="text" placeholder="Name" required>
+          <input class="input" type="email" placeholder="E Mail" required>
+          <textarea class="input textarea" placeholder="Kurz dein Anliegen"></textarea>
+          <button class="ctaBtn" type="submit">Senden <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg></button>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container footerInner">
-        <div>
-          <div class="footerBrand">Meisterseite</div>
-          <div class="footerSmall">Beispielseite Garten und Landschaft</div>
-        </div>
-        <div class="footerLinks">
-          <a href="index.html">Start</a>
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
+  <footer class="footer">
+    <div class="container footerInner">
+      <div>
+        <div class="footerBrand">Meisterseite</div>
+        <div class="footerSmall">Beispielseite Garten & Landschaft.</div>
       </div>
-    </footer>
+      <div class="footerLinks">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</main>
 
-    <a class="sticky" href="#kontakt" aria-label="Kontakt">Kontakt</a>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
